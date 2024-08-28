@@ -1,0 +1,239 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"dependencyDashboard": true,
+	//
+	// Use pull request labels to make them easier to discover and manage.
+	// Suggested label descriptions:
+	// - `dependencies`: Upgrades third-party dependencies.
+	// - `suspended`: Something is holding back the dependency upgrade.
+	"addLabels": ["dependencies"],
+	"stopUpdatingLabel": "suspended",
+	//
+	// Make commit messages pretty and human-friendly.
+	//
+	// Discard the 'v' prefix from the version number.
+	//
+	// Use the verb 'upgrade' instead of 'update'. Unlike 'update', the verb 'upgrade' has a counterpart in 'downgrade'.
+	// In Homebrew, APT, and Yarn, the term 'upgrade' means installing new versions of packages
+	// while 'update' means refreshing the package index.
+	// npm and pnpm use both terms interchangeably.
+	"commitMessageAction": "Upgrade",
+	"commitMessageTopic": "{{#if isGroup}}{{{groupName}}}{{else}}`{{depName}}`{{/if}}",
+	"commitMessageExtra": "to {{{replace '^v' '' newVersion}}}",
+	"commitMessageSuffix": "",
+	//
+	// Refer to select packages by their actual name instead of their npm package name.
+	// Expand this list as needed.
+	//
+	// For npm dependencies, specify both `commitMessageTopic` and `groupName`
+	// to cover the case when only one package in a group needs an upgrade and
+	// to make it more convenient to group dependencies in the future.
+	"packageRules": [
+		{
+			"matchDatasources": ["docker"],
+			"commitMessageTopic": "`{{depName}}` in Docker",
+			"pinDigests": true
+		},
+		{
+			"matchManagers": ["github-actions"],
+			"commitMessageTopic": "`{{depName}}` in GitHub Actions",
+			"pinDigests": true
+		},
+		{
+			"matchManagers": ["terraform"],
+			"commitMessageTopic": "`{{depName}}` in Terraform",
+			"pinDigests": false
+		},
+		{
+			"matchDatasources": ["npm"],
+			"minimumReleaseAge": "3 days"
+		},
+		{
+			"commitMessageTopic": "Node.js",
+			"groupName": "Node.js",
+			"matchManagers": ["nvm"]
+		},
+		{
+			"commitMessageTopic": "Astro",
+			"groupName": "Astro",
+			"matchPackageNames": ["astro"]
+		},
+		{
+			"commitMessageTopic": "Autoprefixer",
+			"groupName": "Autoprefixer",
+			"matchPackageNames": ["autoprefixer"]
+		},
+		{
+			"commitMessageTopic": "Biome",
+			"groupName": "Biome",
+			"matchPackageNames": ["@biomejs/biome"]
+		},
+		{
+			"commitMessageTopic": "DOM Testing Library",
+			"groupName": "DOM Testing Library",
+			"matchPackageNames": ["@testing-library/dom"]
+		},
+		{
+			"commitMessageTopic": "ESLint",
+			"groupName": "ESLint",
+			"matchPackageNames": ["eslint"]
+		},
+		{
+			"commitMessageTopic": "Headless UI",
+			"groupName": "Headless UI",
+			"matchPackageNames": ["@headlessui/react", "@headlessui/vue"]
+		},
+		{
+			"commitMessageTopic": "HLS.js",
+			"groupName": "HLS.js",
+			"matchPackageNames": ["hls.js"]
+		},
+		{
+			"commitMessageTopic": "Jest",
+			"groupName": "Jest",
+			"matchPackageNames": ["jest", "jest-environment-jsdom"]
+		},
+		{
+			"commitMessageTopic": "Lefthook",
+			"groupName": "Lefthook",
+			"matchPackageNames": ["lefthook"]
+		},
+		{
+			"commitMessageTopic": "Mock Service Worker",
+			"groupName": "Mock Service Worker",
+			"matchPackageNames": ["msw"]
+		},
+		{
+			"commitMessageTopic": "Next.js",
+			"groupName": "Next.js",
+			"matchPackageNames": ["next"]
+		},
+		{
+			"commitMessageTopic": "PostCSS",
+			"groupName": "PostCSS",
+			"matchPackageNames": ["postcss"]
+		},
+		{
+			"commitMessageTopic": "Preact",
+			"groupName": "Preact",
+			"matchPackageNames": ["preact"]
+		},
+		{
+			"commitMessageTopic": "Preact Testing Library",
+			"groupName": "Preact Testing Library",
+			"matchPackageNames": ["@testing-library/preact"]
+		},
+		{
+			"commitMessageTopic": "Prettier",
+			"groupName": "Prettier",
+			"matchPackageNames": ["prettier"]
+		},
+		{
+			"commitMessageTopic": "React",
+			"groupName": "React",
+			"matchPackageNames": [
+				"react",
+				"react-dom",
+				"@types/react",
+				"@types/react-dom"
+			]
+		},
+		{
+			"commitMessageTopic": "React Router",
+			"groupName": "React Router",
+			"matchPackageNames": ["react-router", "react-router-dom"]
+		},
+		{
+			"commitMessageTopic": "React Testing Library",
+			"groupName": "React Testing Library",
+			"matchPackageNames": ["@testing-library/react"]
+		},
+		{
+			"commitMessageTopic": "Remix",
+			"groupName": "Remix",
+			"matchPackagePrefixes": ["@remix-run/"]
+		},
+		{
+			"commitMessageTopic": "Solid",
+			"groupName": "Solid",
+			"matchPackageNames": ["solid-js"]
+		},
+		{
+			"commitMessageTopic": "Solid Router",
+			"groupName": "Solid Router",
+			"matchPackageNames": ["@solidjs/router"]
+		},
+		{
+			"commitMessageTopic": "SolidStart",
+			"groupName": "SolidStart",
+			"matchPackageNames": ["@solidjs/start"]
+		},
+		{
+			"commitMessageTopic": "Storybook",
+			"groupName": "Storybook",
+			"matchPackageNames": ["storybook"],
+			"matchPackagePrefixes": ["@storybook/"]
+		},
+		{
+			"commitMessageTopic": "Tailwind CSS",
+			"groupName": "Tailwind CSS",
+			"matchPackageNames": ["tailwindcss"]
+		},
+		{
+			"commitMessageTopic": "TypeScript",
+			"groupName": "TypeScript",
+			"matchPackageNames": ["typescript"]
+		},
+		{
+			"commitMessageTopic": "Undici",
+			"groupName": "Undici",
+			"matchPackageNames": ["undici"]
+		},
+		{
+			"commitMessageTopic": "Valibot",
+			"groupName": "Valibot",
+			"matchPackageNames": ["valibot"]
+		},
+		{
+			"commitMessageTopic": "Vike",
+			"groupName": "Vike",
+			"matchPackageNames": ["vike"]
+		},
+		{
+			"commitMessageTopic": "Vinxi",
+			"groupName": "Vinxi",
+			"matchPackageNames": ["vinxi"]
+		},
+		{
+			"commitMessageTopic": "Vite",
+			"groupName": "Vite",
+			"matchPackageNames": ["vite"]
+		},
+		{
+			"commitMessageTopic": "Vitest",
+			"groupName": "Vitest",
+			"matchPackageNames": ["vitest"],
+			"matchPackagePrefixes": ["@vitest/"]
+		},
+		{
+			"commitMessageTopic": "Vue",
+			"groupName": "Vue",
+			"matchPackageNames": ["vue"]
+		},
+		{
+			"commitMessageTopic": "Vue Router",
+			"groupName": "Vue Router",
+			"matchPackageNames": ["vue-router"]
+		},
+		{
+			"commitMessageTopic": "Vue Testing Library",
+			"groupName": "Vue Testing Library",
+			"matchPackageNames": ["@testing-library/vue"]
+		},
+		{
+			"commitMessageTopic": "Zod",
+			"groupName": "Zod",
+			"matchPackageNames": ["zod"]
+		}
+	]
+}
