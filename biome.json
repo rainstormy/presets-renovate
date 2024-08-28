@@ -2,6 +2,26 @@
 	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
 	"extends": ["@rainstormy/presets-biome/base"],
 	"files": {
-		"ignore": ["dist/"]
-	}
+		"ignore": ["default.json"]
+	},
+	"overrides": [
+		{
+			"include": ["build.js"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noNodejsModules": "off"
+					},
+					"style": {
+						"useFilenamingConvention": {
+							"level": "error",
+							"options": {
+								"filenameCases": ["kebab-case"]
+							}
+						}
+					}
+				}
+			}
+		}
+	]
 }
