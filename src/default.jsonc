@@ -1,5 +1,12 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		":pinAllExceptPeerDependencies",
+		":ignoreModulesAndTests",
+		"customManagers:biomeVersions",
+		"replacements:all",
+		"workarounds:all"
+	],
 	"dependencyDashboard": true,
 	//
 	// Use pull request labels to make them easier to discover and manage.
