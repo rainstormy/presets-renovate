@@ -187,6 +187,11 @@
 			"matchPackagePrefixes": ["@storybook/"]
 		},
 		{
+			"commitMessageTopic": "SVGO",
+			"groupName": "SVGO",
+			"matchPackageNames": ["svgo"]
+		},
+		{
 			"commitMessageTopic": "Tailwind CSS",
 			"groupName": "Tailwind CSS",
 			"matchPackageNames": ["tailwindcss"]
