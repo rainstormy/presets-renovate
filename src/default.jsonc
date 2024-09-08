@@ -76,6 +76,11 @@
 			"matchPackageNames": ["@biomejs/biome"]
 		},
 		{
+			"commitMessageTopic": "Biome presets",
+			"groupName": "Biome presets",
+			"matchPackageNames": ["@rainstormy/presets-biome"]
+		},
+		{
 			"commitMessageTopic": "DOM Testing Library",
 			"groupName": "DOM Testing Library",
 			"matchPackageNames": ["@testing-library/dom"]
@@ -182,6 +187,11 @@
 			"matchPackagePrefixes": ["@storybook/"]
 		},
 		{
+			"commitMessageTopic": "SVGO",
+			"groupName": "SVGO",
+			"matchPackageNames": ["svgo"]
+		},
+		{
 			"commitMessageTopic": "Tailwind CSS",
 			"groupName": "Tailwind CSS",
 			"matchPackageNames": ["tailwindcss"]
@@ -192,9 +202,19 @@
 			"matchPackageNames": ["typescript"]
 		},
 		{
+			"commitMessageTopic": "TypeScript presets",
+			"groupName": "TypeScript presets",
+			"matchPackageNames": ["@rainstormy/presets-typescript"]
+		},
+		{
 			"commitMessageTopic": "Undici",
 			"groupName": "Undici",
 			"matchPackageNames": ["undici"]
+		},
+		{
+			"commitMessageTopic": "Updraft",
+			"groupName": "Updraft",
+			"matchPackageNames": ["@rainstormy/updraft"]
 		},
 		{
 			"commitMessageTopic": "Valibot",
