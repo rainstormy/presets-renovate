@@ -1,4 +1,4 @@
-# Presets for Renovate
+# Opinionated Presets for Renovate
 
 This package provides predefined,
 opinionated [Renovate](https://mend.io/renovate) presets to be applied to
