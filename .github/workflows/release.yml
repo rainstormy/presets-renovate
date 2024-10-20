@@ -53,7 +53,7 @@ jobs:
         uses: ./.github/actions/build-artifacts
         #
       - name: Move build artifacts to the project root directory
-        run: mv --force dist/default.json ./
+        run: mv --force dist/*.json ./
         #
       - name: Update release artifacts
         uses: rainstormy-actions/updraft@a56005ba6b1ecf4c9f63c5b8f1354c0e081cc5b2 # v1.1.0

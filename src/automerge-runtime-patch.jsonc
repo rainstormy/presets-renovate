@@ -1,0 +1,33 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"packageRules": [
+		{
+			// Merge patch upgrades for all packages bundled into production
+			// artifacts for the server or the browser.
+			"matchPackageNames": [
+				"@headlessui/react",
+				"@headlessui/vue",
+				"@solidjs/router",
+				"@solidjs/start",
+				"astro",
+				"hls.js",
+				"next",
+				"preact",
+				"react",
+				"react-dom",
+				"react-router",
+				"react-router-dom",
+				"solid-js",
+				"undici",
+				"valibot",
+				"vike",
+				"vue",
+				"vue-router",
+				"zod"
+			],
+			"matchPackagePrefixes": ["@remix-run/"],
+			"matchUpdateTypes": ["patch"],
+			"automerge": true
+		}
+	]
+}

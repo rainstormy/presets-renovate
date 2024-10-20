@@ -8,14 +8,14 @@
 		"workarounds:all"
 	],
 	"dependencyDashboard": true,
-	//
+
 	// Use pull request labels to make them easier to discover and manage.
 	// Suggested label descriptions:
 	// - `dependencies`: Upgrades third-party dependencies.
 	// - `suspended`: Something is holding back the dependency upgrade.
 	"addLabels": ["dependencies"],
 	"stopUpdatingLabel": "suspended",
-	//
+
 	// Make commit messages pretty and human-friendly.
 	//
 	// Discard the 'v' prefix from the version number.
@@ -28,7 +28,7 @@
 	"commitMessageTopic": "{{#if isGroup}}{{{groupName}}}{{else}}`{{depName}}`{{/if}}",
 	"commitMessageExtra": "to {{{replace '^v' '' newVersion}}}",
 	"commitMessageSuffix": "",
-	//
+
 	// Refer to select packages by their actual name instead of their npm package name.
 	// Expand this list as needed.
 	//
