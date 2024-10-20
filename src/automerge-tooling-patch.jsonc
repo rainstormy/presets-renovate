@@ -1,0 +1,39 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"packageRules": [
+		{
+			// Merge patch upgrades for all GitHub Actions.
+			"matchManagers": ["github-actions"],
+			"matchUpdateTypes": ["patch"],
+			"automerge": true
+		},
+		{
+			// Merge patch upgrades for all packages related to testing,
+			// formatting, linting, type-checking, and developer experience.
+			"matchPackageNames": [
+				"@biomejs/biome",
+				"@rainstormy/presets-biome",
+				"@rainstormy/presets-typescript",
+				"@rainstormy/updraft",
+				"@testing-library/dom",
+				"@testing-library/preact",
+				"@testing-library/react",
+				"@testing-library/vue",
+				"@types/react",
+				"@types/react-dom",
+				"eslint",
+				"jest",
+				"jest-environment-jsdom",
+				"lefthook",
+				"msw",
+				"prettier",
+				"storybook",
+				"typescript",
+				"vitest"
+			],
+			"matchPackagePrefixes": ["@storybook/", "@vitest/"],
+			"matchUpdateTypes": ["patch"],
+			"automerge": true
+		}
+	]
+}

@@ -8,45 +8,43 @@ property in `renovate.json`.
 ## Usage
 Create a [`renovate.json`](https://docs.renovatebot.com/configuration-options)
 file and [extend](https://docs.renovatebot.com/config-presets/#github)
-`github>rainstormy/presets-renovate` to enable opinionated dependency upgrades.
+`github>rainstormy/presets-renovate` to enable opinionated dependency upgrades
+in general.
+
+In addition to this, you can extend some of the following configurations to
+refine the dependency upgrade settings for your project:
+
+| Configuration                                                | Description                                                                                                                                                          |
+|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `github>rainstormy/presets-renovate:automerge-build-patch`   | Automatically merges patch upgrades for select packages that affect the build artifacts deployed into production.                                                    |
+| `github>rainstormy/presets-renovate:automerge-runtime-patch` | Automatically merges patch upgrades for select packages bundled into the build artifacts deployed on the server or in the browser.                                   |
+| `github>rainstormy/presets-renovate:automerge-tooling-patch` | Automatically merges patch upgrades for all GitHub Actions and for select packages related to testing, formatting, linting, type-checking, and developer experience. |
+
+You can override the predefined settings by specifying the desired options like
+`schedule`, `automergeSchedule`, `timezone`, and additional entries in
+`packageRules` as usual.
 
 For example:
 
 ```json
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>rainstormy/presets-renovate"]
-}
-```
-
-### Override settings
-Specify the desired options like `schedule`, `automergeSchedule`, and additional
-entries in `packageRules` as usual.
-
-For example:
-
-```json
-{
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>rainstormy/presets-renovate"],
-    "schedule": ["before 8am every weekday"],
-    "automergeSchedule": ["after 9am and before 3pm every weekday"],
-    "packageRules": [
-        {
-            "matchPackageNames": [
-                "postcss",
-                "storybook",
-                "typescript",
-                "vitest"
-            ],
-            "matchPackagePrefixes": [
-                "@storybook/",
-                "@vitest/"
-            ],
-            "matchUpdateTypes": ["patch"],
-            "automerge": true
-        }
-    ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>rainstormy/presets-renovate",
+    "github>rainstormy/presets-renovate:automerge-build-patch",
+    "github>rainstormy/presets-renovate:automerge-runtime-patch",
+    "github>rainstormy/presets-renovate:automerge-tooling-patch"
+  ],
+  "schedule": ["before 8am every weekday"],
+  "automergeSchedule": ["after 9am and before 3pm every weekday"],
+  "timezone": "Europe/Copenhagen",
+  "packageRules": [
+    {
+      "matchPackageNames": ["storybook", "vitest"],
+      "matchPackagePrefixes": ["@storybook/", "@vitest/"],
+      "enabled": false
+    }
+  ]
 }
 ```
 
