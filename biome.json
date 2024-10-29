@@ -2,7 +2,12 @@
 	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
 	"extends": ["@rainstormy/presets-biome/base"],
 	"files": {
-		"ignore": ["default.json"]
+		"ignore": [
+			"automerge-build-patch.json",
+			"automerge-runtime-patch.json",
+			"automerge-tooling-patch.json",
+			"default.json"
+		]
 	},
 	"overrides": [
 		{
