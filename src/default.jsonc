@@ -73,7 +73,8 @@
 		{
 			"commitMessageTopic": "Biome",
 			"groupName": "Biome",
-			"matchPackageNames": ["@biomejs/biome"]
+			"matchPackageNames": ["@biomejs/biome"],
+			"minimumReleaseAge": "0"
 		},
 		{
 			"commitMessageTopic": "Biome presets",
