@@ -163,7 +163,7 @@
 		{
 			"commitMessageTopic": "Remix",
 			"groupName": "Remix",
-			"matchPackagePrefixes": ["@remix-run/"]
+			"matchPackageNames": ["@remix-run/**"]
 		},
 		{
 			"commitMessageTopic": "Solid",
@@ -183,8 +183,7 @@
 		{
 			"commitMessageTopic": "Storybook",
 			"groupName": "Storybook",
-			"matchPackageNames": ["storybook"],
-			"matchPackagePrefixes": ["@storybook/"]
+			"matchPackageNames": ["@storybook/**", "storybook"]
 		},
 		{
 			"commitMessageTopic": "SVGO",
@@ -239,8 +238,7 @@
 		{
 			"commitMessageTopic": "Vitest",
 			"groupName": "Vitest",
-			"matchPackageNames": ["vitest"],
-			"matchPackagePrefixes": ["@vitest/"]
+			"matchPackageNames": ["@vitest/**", "vitest"]
 		},
 		{
 			"commitMessageTopic": "Vue",

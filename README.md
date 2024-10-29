@@ -40,8 +40,12 @@ For example:
   "timezone": "Europe/Copenhagen",
   "packageRules": [
     {
-      "matchPackageNames": ["storybook", "vitest"],
-      "matchPackagePrefixes": ["@storybook/", "@vitest/"],
+      "matchPackageNames": [
+        "@storybook/**",
+        "@vitest/**",
+        "storybook",
+        "vitest"
+      ],
       "enabled": false
     }
   ]
