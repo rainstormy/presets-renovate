@@ -7,6 +7,7 @@
 			"matchPackageNames": [
 				"@headlessui/react",
 				"@headlessui/vue",
+				"@remix-run/**",
 				"@solidjs/router",
 				"@solidjs/start",
 				"astro",
@@ -25,7 +26,6 @@
 				"vue-router",
 				"zod"
 			],
-			"matchPackagePrefixes": ["@remix-run/"],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
 		}

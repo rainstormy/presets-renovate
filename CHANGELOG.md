@@ -10,6 +10,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - New preset: `github>rainstormy/presets-renovate:automerge-runtime-patch`.
 - New preset: `github>rainstormy/presets-renovate:automerge-tooling-patch`.
 
+### Changed
+- Disable `minimumReleaseAge` for Biome.
+
+### Fixed
+- Use glob patterns in `matchPackageNames` instead of `matchPackagePrefixes`.
+
 ## [1.0.0] - 2024-09-01
 ### Added
 - [MIT license](https://choosealicense.com/licenses/mit).
