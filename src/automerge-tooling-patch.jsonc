@@ -35,6 +35,13 @@
 			],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
+		},
+		{
+			// Merge patch upgrades for other dependencies related to developer
+			// experience.
+			"matchDepNames": ["rainstormy/presets-lefthook"],
+			"matchUpdateTypes": ["patch"],
+			"automerge": true
 		}
 	]
 }

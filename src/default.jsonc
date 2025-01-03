@@ -29,6 +29,20 @@
 	"commitMessageExtra": "to {{{replace '^v' '' newVersion}}}",
 	"commitMessageSuffix": "",
 
+	"customManagers": [
+		// Support upgrading remote Lefthook configurations.
+		{
+			"customType": "regex",
+			"datasourceTemplate": "github-tags",
+			"fileMatch": ["(^|/)\\.?lefthook(-local)?\\.ya?ml$"],
+			"matchStrings": [
+				"git_url:\\s*(git@github\\.com:|https://github\\.com/)(?<depName>[A-Za-z0-9-]+/[A-Za-z0-9_.-]+)",
+				"ref:\\s*(?<currentValue>[^\\s]+)"
+			],
+			"matchStringsStrategy": "combination"
+		}
+	],
+
 	// Refer to select packages by their actual name instead of their npm package name.
 	// Expand this list as needed.
 	//
@@ -110,6 +124,11 @@
 			"commitMessageTopic": "Lefthook",
 			"groupName": "Lefthook",
 			"matchPackageNames": ["lefthook"]
+		},
+		{
+			"commitMessageTopic": "Lefthook presets",
+			"groupName": "Lefthook presets",
+			"matchDepNames": ["rainstormy/presets-lefthook"]
 		},
 		{
 			"commitMessageTopic": "Mock Service Worker",
