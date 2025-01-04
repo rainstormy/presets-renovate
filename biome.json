@@ -6,7 +6,8 @@
 			"automerge-build-patch.json",
 			"automerge-runtime-patch.json",
 			"automerge-tooling-patch.json",
-			"default.json"
+			"default.json",
+			"skip-nodejs-major.json"
 		]
 	},
 	"overrides": [
