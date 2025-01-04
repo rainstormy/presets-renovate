@@ -72,7 +72,7 @@
 		{
 			"commitMessageTopic": "Node.js",
 			"groupName": "Node.js",
-			"matchManagers": ["nvm"]
+			"matchPackageNames": ["node"]
 		},
 		{
 			"commitMessageTopic": "Astro",
