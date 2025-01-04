@@ -6,6 +6,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 ### Added
+- New preset: `github>rainstormy/presets-renovate:skip-nodejs-major`.
 - Support upgrading remote Lefthook configurations.
 
 ## [1.1.0] - 2024-10-29
