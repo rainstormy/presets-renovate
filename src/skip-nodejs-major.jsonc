@@ -3,7 +3,7 @@
 	"packageRules": [
 		{
 			// Exclude major upgrades of Node.js.
-			"matchPackageNames": ["@types/node", "node"],
+			"matchPackageNames": ["@types/node", "node", "nodejs"],
 			"matchUpdateTypes": ["major"],
 			"enabled": false
 		}
