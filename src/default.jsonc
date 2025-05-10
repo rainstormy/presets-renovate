@@ -29,16 +29,32 @@
 	"commitMessageExtra": "to {{{replace '^v' '' newVersion}}}",
 	"commitMessageSuffix": "",
 
+	// https://docs.renovatebot.com/modules/manager/regex
 	"customManagers": [
-		// Support upgrading remote Lefthook configurations.
 		{
+			// Support upgrading remote Lefthook configurations.
+			// https://lefthook.dev/configuration/remotes.html
 			"customType": "regex",
 			"datasourceTemplate": "github-tags",
+			// language=JSRegexp
 			"fileMatch": ["(^|/)\\.?lefthook(-local)?\\.ya?ml$"],
+			// language=JSRegexp
 			"matchStrings": [
 				"git_url:\\s*(git@github\\.com:|https://github\\.com/)(?<depName>[A-Za-z0-9-]+/[A-Za-z0-9_.-]+)",
-				"ref:\\s*(?<currentValue>[^\\s]+)"
+				"ref:\\s*(?<currentValue>\\S+)"
 			],
+			"matchStringsStrategy": "combination"
+		},
+		{
+			// Support upgrading the minimum required version of mise-en-place.
+			// https://mise.jdx.dev/configuration.html
+			"customType": "regex",
+			"datasourceTemplate": "github-tags",
+			"depNameTemplate": "jdx/mise",
+			// language=JSRegexp
+			"fileMatch": ["(^|/)(\\.config/)?mise(\\.local|/config)?\\.toml$"],
+			// language=JSRegexp
+			"matchStrings": ["min_version\\s*=\\s*['\"](?<currentValue>\\S+)['\"]"],
 			"matchStringsStrategy": "combination"
 		}
 	],
@@ -129,6 +145,12 @@
 			"commitMessageTopic": "Lefthook presets",
 			"groupName": "Lefthook presets",
 			"matchDepNames": ["rainstormy/presets-lefthook"]
+		},
+		{
+			"commitMessageTopic": "mise-en-place",
+			"groupName": "mise-en-place",
+			"matchDepNames": ["jdx/mise"],
+			"matchUpdateTypes": ["major", "minor"] // Currently, mise-en-place has a very frequent release cadence. Its versioning scheme is date-based instead of SemVer. Upgrading to major and minor versions results in a monthly upgrade.
 		},
 		{
 			"commitMessageTopic": "Mock Service Worker",
