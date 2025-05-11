@@ -137,6 +137,11 @@
 			"matchPackageNames": ["hls.js"]
 		},
 		{
+			"commitMessageTopic": "Howler",
+			"groupName": "Howler",
+			"matchPackageNames": ["howler"]
+		},
+		{
 			"commitMessageTopic": "Jest",
 			"groupName": "Jest",
 			"matchPackageNames": ["jest", "jest-environment-jsdom"]
