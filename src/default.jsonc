@@ -91,6 +91,11 @@
 			"matchPackageNames": ["node"]
 		},
 		{
+			"commitMessageTopic": "Ansis",
+			"groupName": "Ansis",
+			"matchPackageNames": ["ansis"]
+		},
+		{
 			"commitMessageTopic": "Astro",
 			"groupName": "Astro",
 			"matchPackageNames": ["astro"]
@@ -130,6 +135,11 @@
 			"commitMessageTopic": "HLS.js",
 			"groupName": "HLS.js",
 			"matchPackageNames": ["hls.js"]
+		},
+		{
+			"commitMessageTopic": "Howler",
+			"groupName": "Howler",
+			"matchPackageNames": ["howler"]
 		},
 		{
 			"commitMessageTopic": "Jest",
@@ -206,6 +216,11 @@
 			"commitMessageTopic": "Remix",
 			"groupName": "Remix",
 			"matchPackageNames": ["@remix-run/**"]
+		},
+		{
+			"commitMessageTopic": "Snowplow",
+			"groupName": "Snowplow",
+			"matchPackageNames": ["@snowplow/**"]
 		},
 		{
 			"commitMessageTopic": "Solid",
