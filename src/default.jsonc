@@ -218,6 +218,11 @@
 			"matchPackageNames": ["@remix-run/**"]
 		},
 		{
+			"commitMessageTopic": "Snowplow",
+			"groupName": "Snowplow",
+			"matchPackageNames": ["@snowplow/**"]
+		},
+		{
 			"commitMessageTopic": "Solid",
 			"groupName": "Solid",
 			"matchPackageNames": ["solid-js"]

@@ -6,10 +6,13 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 ### Added
-- Support upgrading the minimum required version 
+- Support upgrading the minimum required version
   of [mise-en-place](https://mise.jdx.dev).
 - Support auto-merging [Ansis](https://github.com/webdiscus/ansis) packages.
 - Support auto-merging [Howler](https://howlerjs.com) packages.
+- Support
+  auto-merging [Snowplow](https://docs.snowplow.io/docs/sources/trackers/javascript-trackers)
+  packages.
 
 ### Fixed
 - Recognise `nodejs` as a Node.js identifier in

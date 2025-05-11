@@ -8,6 +8,7 @@
 				"@headlessui/react",
 				"@headlessui/vue",
 				"@remix-run/**",
+				"@snowplow/**",
 				"@solidjs/router",
 				"@solidjs/start",
 				"ansis",
