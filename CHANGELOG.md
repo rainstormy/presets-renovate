@@ -6,32 +6,33 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 ### Added
-- Support upgrading the minimum required version
-  of [mise-en-place](https://mise.jdx.dev).
-- Support auto-merging [Ansis](https://github.com/webdiscus/ansis) packages.
-- Support auto-merging [Howler](https://howlerjs.com) packages.
-- Support
-  auto-merging [Snowplow](https://docs.snowplow.io/docs/sources/trackers/javascript-trackers)
-  packages.
+- Upgrade the minimum required version of [mise-en-place](https://mise.jdx.dev).
+- Support [Ansis](https://github.com/webdiscus/ansis) packages in the
+  `automerge-runtime-patch` configuration.
+- Support [Howler](https://howlerjs.com) packages in the
+  `automerge-runtime-patch` configuration.
+- Support [Snowplow](https://docs.snowplow.io) packages in the
+  `automerge-runtime-patch` configuration.
 
 ### Fixed
-- Recognise `nodejs` as a Node.js identifier in
-  `github>rainstormy/presets-renovate:skip-nodejs-major`, as implemented
-  by [mise-en-place](https://mise.jdx.dev) in `mise.toml`.
+- Recognise `nodejs` as a Node.js identifier in the `skip-nodejs-major`
+  configuration, as implemented by [mise-en-place](https://mise.jdx.dev) in
+  `mise.toml`.
 
 ## [1.2.0] - 2025-01-04
 ### Added
-- New preset: `github>rainstormy/presets-renovate:skip-nodejs-major`.
-- Support upgrading remote [Lefthook](https://lefthook.dev) configurations.
+- New configuration: `github>rainstormy/presets-renovate:skip-nodejs-major`.
+- Upgrade remote [Lefthook](https://lefthook.dev) configurations.
 
 ## [1.1.0] - 2024-10-29
 ### Added
-- New preset: `github>rainstormy/presets-renovate:automerge-build-patch`.
-- New preset: `github>rainstormy/presets-renovate:automerge-runtime-patch`.
-- New preset: `github>rainstormy/presets-renovate:automerge-tooling-patch`.
+- New configuration: `github>rainstormy/presets-renovate:automerge-build-patch`.
+- New configuration: `github>rainstormy/presets-renovate:automerge-runtime-patch`.
+- New configuration: `github>rainstormy/presets-renovate:automerge-tooling-patch`.
 
 ### Changed
-- Disable `minimumReleaseAge` for [Biome](https://biomejs.dev).
+- Disable `minimumReleaseAge` for [Biome](https://biomejs.dev) to ensure that it
+  stays in sync with the `$schema` property in `biome.json`.
 
 ### Fixed
 - Use glob patterns in `matchPackageNames` instead of `matchPackagePrefixes`.
@@ -39,7 +40,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [1.0.0] - 2024-09-01
 ### Added
 - [MIT license](https://choosealicense.com/licenses/mit).
-- New preset: `github>rainstormy/presets-renovate`.
+- New configuration: `github>rainstormy/presets-renovate`.
 
 [unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.2.0...HEAD
 [1.2.0]: https://github.com/rainstormy/presets-renovate/compare/v1.1.0...v1.2.0
