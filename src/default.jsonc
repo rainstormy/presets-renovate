@@ -91,6 +91,11 @@
 			"matchPackageNames": ["node"]
 		},
 		{
+			"commitMessageTopic": "Ansis",
+			"groupName": "Ansis",
+			"matchPackageNames": ["ansis"]
+		},
+		{
 			"commitMessageTopic": "Astro",
 			"groupName": "Astro",
 			"matchPackageNames": ["astro"]
