@@ -250,7 +250,7 @@
 		{
 			"commitMessageTopic": "Tailwind CSS",
 			"groupName": "Tailwind CSS",
-			"matchPackageNames": ["tailwindcss"]
+			"matchPackageNames": ["@tailwindcss/**", "tailwindcss"]
 		},
 		{
 			"commitMessageTopic": "TypeScript",
