@@ -15,6 +15,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `automerge-runtime-patch` configuration.
 
 ### Fixed
+- Recognise `@tailwindcss/**` packages.
 - Recognise `nodejs` as a Node.js identifier in the `skip-nodejs-major`
   configuration, as implemented by [mise-en-place](https://mise.jdx.dev) in
   `mise.toml`.
