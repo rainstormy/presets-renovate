@@ -5,6 +5,8 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.3.0] - 2025-05-18
 ### Added
 - Upgrade the minimum required version of [mise-en-place](https://mise.jdx.dev).
 - Support [Ansis](https://github.com/webdiscus/ansis) packages in the
@@ -43,7 +45,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [MIT license](https://choosealicense.com/licenses/mit).
 - New configuration: `github>rainstormy/presets-renovate`.
 
-[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/rainstormy/presets-renovate/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/rainstormy/presets-renovate/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/rainstormy/presets-renovate/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/rainstormy/presets-renovate/releases/tag/v1.0.0
