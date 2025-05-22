@@ -159,8 +159,15 @@
 		{
 			"commitMessageTopic": "mise-en-place",
 			"groupName": "mise-en-place",
+			"matchDepNames": ["jdx/mise"]
+		},
+		{
+			// Currently, mise-en-place has a very frequent release cadence.
+			// Its versioning scheme is date-based instead of SemVer.
+			// Upgrading only to major and minor versions results in a monthly upgrade.
 			"matchDepNames": ["jdx/mise"],
-			"matchUpdateTypes": ["major", "minor"] // Currently, mise-en-place has a very frequent release cadence. Its versioning scheme is date-based instead of SemVer. Upgrading to major and minor versions results in a monthly upgrade.
+			"matchUpdateTypes": ["patch"],
+			"enabled": false
 		},
 		{
 			"commitMessageTopic": "Mock Service Worker",
