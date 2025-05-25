@@ -88,7 +88,7 @@
 		{
 			"commitMessageTopic": "Node.js",
 			"groupName": "Node.js",
-			"matchPackageNames": ["node"]
+			"matchPackageNames": ["node", "nodejs"]
 		},
 		{
 			"commitMessageTopic": "Ansis",
