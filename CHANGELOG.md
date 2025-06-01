@@ -7,6 +7,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 ### Fixed
 - Skip [mise-en-place](https://mise.jdx.dev) patch releases by default.
+- Support `@tailwindcss/**` packages in the `automerge-build-patch`
+  configuration.
 
 ## [1.3.0] - 2025-05-18
 ### Added
@@ -32,8 +34,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [1.1.0] - 2024-10-29
 ### Added
 - New configuration: `github>rainstormy/presets-renovate:automerge-build-patch`.
-- New configuration: `github>rainstormy/presets-renovate:automerge-runtime-patch`.
-- New configuration: `github>rainstormy/presets-renovate:automerge-tooling-patch`.
+- New configuration:
+  `github>rainstormy/presets-renovate:automerge-runtime-patch`.
+- New configuration:
+  `github>rainstormy/presets-renovate:automerge-tooling-patch`.
 
 ### Changed
 - Disable `minimumReleaseAge` for [Biome](https://biomejs.dev) to ensure that it

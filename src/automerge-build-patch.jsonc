@@ -5,6 +5,7 @@
 			// Merge patch upgrades for all packages that affect the build
 			// artifacts deployed into production.
 			"matchPackageNames": [
+				"@tailwindcss/**",
 				"autoprefixer",
 				"postcss",
 				"svgo",
