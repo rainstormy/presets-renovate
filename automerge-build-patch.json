@@ -1,1 +1,1 @@
-{"$schema":"https://docs.renovatebot.com/renovate-schema.json","packageRules":[{"matchPackageNames":["autoprefixer","postcss","svgo","tailwindcss","vinxi","vite"],"matchUpdateTypes":["patch"],"automerge":true}]}
+{"$schema":"https://docs.renovatebot.com/renovate-schema.json","packageRules":[{"matchPackageNames":["@tailwindcss/**","autoprefixer","postcss","svgo","tailwindcss","vinxi","vite"],"matchUpdateTypes":["patch"],"automerge":true}]}
