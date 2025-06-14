@@ -2,8 +2,8 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"packageRules": [
 		{
-			// Merge patch upgrades for all packages that affect the build
-			// artifacts deployed into production.
+			// Merge patch upgrades of Node.js packages that generate the build
+			// artefacts deployed into production.
 			"matchPackageNames": [
 				"@tailwindcss/**",
 				"autoprefixer",

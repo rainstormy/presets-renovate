@@ -180,6 +180,11 @@
 			"matchPackageNames": ["next"]
 		},
 		{
+			"commitMessageTopic": "pnpm",
+			"groupName": "pnpm",
+			"matchDepNames": ["pnpm"]
+		},
+		{
 			"commitMessageTopic": "PostCSS",
 			"groupName": "PostCSS",
 			"matchPackageNames": ["postcss"]

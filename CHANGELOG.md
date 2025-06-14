@@ -5,6 +5,9 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Support [pnpm](https://pnpm.io) in the `automerge-tooling-patch`
+  configuration.
 
 ## [1.3.1] - 2025-06-05
 ### Fixed
