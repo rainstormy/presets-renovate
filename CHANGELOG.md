@@ -11,6 +11,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Support [Node Redis](https://redis.js.org) packages in the
   `automerge-runtime-patch` configuration.
 
+### Changed
+- Add a 'the' prefix to some commit messages to make them sound more natural.
+
 ## [1.3.1] - 2025-06-05
 ### Fixed
 - Skip [mise-en-place](https://mise.jdx.dev) patch releases by default.
