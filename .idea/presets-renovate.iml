@@ -4,7 +4,12 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/dist" />
+      <excludePattern pattern="automerge-build-patch.json" />
+      <excludePattern pattern="automerge-runtime-patch.json" />
+      <excludePattern pattern="automerge-tooling-patch.json" />
+      <excludePattern pattern="default.json" />
       <excludePattern pattern="pnpm-lock.yaml" />
+      <excludePattern pattern="skip-nodejs-major.json" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
