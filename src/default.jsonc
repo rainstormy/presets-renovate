@@ -225,6 +225,11 @@
 			"matchPackageNames": ["@testing-library/react"]
 		},
 		{
+			"commitMessageTopic": "the Redis client for Node.js",
+			"groupName": "the Redis client for Node.js",
+			"matchPackageNames": ["@redis/**", "redis"]
+		},
+		{
 			"commitMessageTopic": "Remix",
 			"groupName": "Remix",
 			"matchPackageNames": ["@remix-run/**"]
