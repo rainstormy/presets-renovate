@@ -3,6 +3,11 @@
 	"search.exclude": {
 		"dist/": true,
 		"node_modules/": true,
-		"pnpm-lock.yaml": true
+		"automerge-build-patch.json": true,
+		"automerge-runtime-patch.json": true,
+		"automerge-tooling-patch.json": true,
+		"default.json": true,
+		"pnpm-lock.yaml": true,
+		"skip-nodejs-major.json": true
 	}
 }
