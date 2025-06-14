@@ -2,14 +2,13 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"packageRules": [
 		{
-			// Merge patch upgrades for all GitHub Actions.
+			// Merge patch upgrades in GitHub Actions workflows.
 			"matchManagers": ["github-actions"],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
 		},
 		{
-			// Merge patch upgrades for all packages related to testing,
-			// formatting, linting, type-checking, and developer experience.
+			// Merge patch upgrades of Node.js packages in the developer toolchain.
 			"matchPackageNames": [
 				"@biomejs/biome",
 				"@rainstormy/presets-biome",
@@ -28,6 +27,7 @@
 				"jest-environment-jsdom",
 				"lefthook",
 				"msw",
+				"pnpm",
 				"prettier",
 				"storybook",
 				"typescript",
@@ -37,8 +37,7 @@
 			"automerge": true
 		},
 		{
-			// Merge patch upgrades for other dependencies related to developer
-			// experience.
+			// Merge patch upgrades of other dependencies in the developer toolchain.
 			"matchDepNames": ["rainstormy/presets-lefthook"],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
