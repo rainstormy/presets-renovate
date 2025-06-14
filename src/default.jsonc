@@ -112,13 +112,13 @@
 			"minimumReleaseAge": "0"
 		},
 		{
-			"commitMessageTopic": "Biome presets",
-			"groupName": "Biome presets",
+			"commitMessageTopic": "the Biome presets",
+			"groupName": "the Biome presets",
 			"matchPackageNames": ["@rainstormy/presets-biome"]
 		},
 		{
-			"commitMessageTopic": "DOM Testing Library",
-			"groupName": "DOM Testing Library",
+			"commitMessageTopic": "the DOM Testing Library",
+			"groupName": "the DOM Testing Library",
 			"matchPackageNames": ["@testing-library/dom"]
 		},
 		{
@@ -152,8 +152,8 @@
 			"matchPackageNames": ["lefthook"]
 		},
 		{
-			"commitMessageTopic": "Lefthook presets",
-			"groupName": "Lefthook presets",
+			"commitMessageTopic": "the Lefthook presets",
+			"groupName": "the Lefthook presets",
 			"matchDepNames": ["rainstormy/presets-lefthook"]
 		},
 		{
@@ -195,8 +195,8 @@
 			"matchPackageNames": ["preact"]
 		},
 		{
-			"commitMessageTopic": "Preact Testing Library",
-			"groupName": "Preact Testing Library",
+			"commitMessageTopic": "the Preact Testing Library",
+			"groupName": "the Preact Testing Library",
 			"matchPackageNames": ["@testing-library/preact"]
 		},
 		{
@@ -220,9 +220,14 @@
 			"matchPackageNames": ["react-router", "react-router-dom"]
 		},
 		{
-			"commitMessageTopic": "React Testing Library",
-			"groupName": "React Testing Library",
+			"commitMessageTopic": "the React Testing Library",
+			"groupName": "the React Testing Library",
 			"matchPackageNames": ["@testing-library/react"]
+		},
+		{
+			"commitMessageTopic": "the Redis client for Node.js",
+			"groupName": "the Redis client for Node.js",
+			"matchPackageNames": ["@redis/**", "redis"]
 		},
 		{
 			"commitMessageTopic": "Remix",
@@ -270,8 +275,8 @@
 			"matchPackageNames": ["typescript"]
 		},
 		{
-			"commitMessageTopic": "TypeScript presets",
-			"groupName": "TypeScript presets",
+			"commitMessageTopic": "the TypeScript presets",
+			"groupName": "the TypeScript presets",
 			"matchPackageNames": ["@rainstormy/presets-typescript"]
 		},
 		{
@@ -320,8 +325,8 @@
 			"matchPackageNames": ["vue-router"]
 		},
 		{
-			"commitMessageTopic": "Vue Testing Library",
-			"groupName": "Vue Testing Library",
+			"commitMessageTopic": "the Vue Testing Library",
+			"groupName": "the Vue Testing Library",
 			"matchPackageNames": ["@testing-library/vue"]
 		},
 		{

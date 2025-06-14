@@ -7,6 +7,7 @@
 			"matchPackageNames": [
 				"@headlessui/react",
 				"@headlessui/vue",
+				"@redis/**",
 				"@remix-run/**",
 				"@snowplow/**",
 				"@solidjs/router",
@@ -21,6 +22,7 @@
 				"react-dom",
 				"react-router",
 				"react-router-dom",
+				"redis",
 				"solid-js",
 				"undici",
 				"valibot",

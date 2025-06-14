@@ -8,6 +8,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - Support [pnpm](https://pnpm.io) in the `automerge-tooling-patch`
   configuration.
+- Support [Node Redis](https://redis.js.org) packages in the
+  `automerge-runtime-patch` configuration.
+
+### Changed
+- Add a 'the' prefix to some commit messages to make them sound more natural.
 
 ## [1.3.1] - 2025-06-05
 ### Fixed
