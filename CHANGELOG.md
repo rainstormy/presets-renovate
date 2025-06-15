@@ -5,6 +5,8 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.4.0] - 2025-06-15
 ### Added
 - Support [Node Redis](https://redis.js.org) packages in the
   `automerge-runtime-patch` configuration.
@@ -63,7 +65,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [MIT license](https://choosealicense.com/licenses/mit).
 - New configuration: `github>rainstormy/presets-renovate`.
 
-[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.3.1...HEAD
+[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/rainstormy/presets-renovate/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/rainstormy/presets-renovate/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/rainstormy/presets-renovate/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/rainstormy/presets-renovate/compare/v1.1.0...v1.2.0
