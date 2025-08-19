@@ -11,6 +11,8 @@
 			// Merge patch upgrades of Node.js packages in the developer toolchain.
 			"matchPackageNames": [
 				"@biomejs/biome",
+				"@chromatic-com/**",
+				"@mswjs/**",
 				"@rainstormy/presets-biome",
 				"@rainstormy/presets-typescript",
 				"@rainstormy/updraft",
@@ -21,6 +23,7 @@
 				"@testing-library/vue",
 				"@types/**",
 				"@vitest/**",
+				"chromatic",
 				"eslint",
 				"jest",
 				"jest-environment-jsdom",

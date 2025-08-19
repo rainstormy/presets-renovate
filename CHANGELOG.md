@@ -5,6 +5,12 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Support the [Chromatic CLI](https://www.chromatic.com/docs/cli/) and
+  `@chromatic-com/**` packages in the `automerge-tooling-patch` configuration.
+
+### Fixed
+- Support `@mswjs/**` packages in the `automerge-tooling-patch` configuration.
 
 ## [1.4.0] - 2025-06-15
 ### Added
