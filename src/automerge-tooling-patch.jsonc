@@ -12,6 +12,7 @@
 			"matchPackageNames": [
 				"@biomejs/biome",
 				"@chromatic-com/**",
+				"@mswjs/**",
 				"@rainstormy/presets-biome",
 				"@rainstormy/presets-typescript",
 				"@rainstormy/updraft",
