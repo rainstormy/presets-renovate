@@ -8,6 +8,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - Support the [Chromatic CLI](https://www.chromatic.com/docs/cli/) and
   `@chromatic-com/**` packages in the `automerge-tooling-patch` configuration.
+- Support [mise-en-place](https://mise.jdx.dev) in the `automerge-tooling-patch`
+  configuration.
 
 ### Changed
 - Upgrade [mise-en-place](https://mise.jdx.dev) only to the first release of a
