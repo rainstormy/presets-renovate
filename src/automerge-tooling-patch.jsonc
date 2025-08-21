@@ -43,6 +43,12 @@
 			"matchDepNames": ["rainstormy/presets-lefthook"],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
+		},
+		{
+			// Merge monthly upgrades of mise-en-place.
+			// Its versioning scheme is date-based instead of SemVer.
+			"matchDepNames": ["jdx/mise"],
+			"automerge": true
 		}
 	]
 }
