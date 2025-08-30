@@ -36,8 +36,8 @@ For example:
     "github>rainstormy/presets-renovate:automerge-runtime-patch",
     "github>rainstormy/presets-renovate:automerge-tooling-patch"
   ],
-  "schedule": ["before 8am every weekday"],
-  "automergeSchedule": ["after 9am and before 3pm every weekday"],
+  "schedule": ["* 0-7 * * mon-fri"],
+  "automergeSchedule": ["* 9-14 * * mon-fri"],
   "timezone": "Europe/Copenhagen",
   "packageRules": [
     {
