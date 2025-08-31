@@ -3,9 +3,9 @@
 	"extends": ["@rainstormy/presets-biome/2.2"],
 	"files": {
 		"includes": [
-			".github/**",
-			".vscode/**",
-			"src/**",
+			".github/**/*",
+			".vscode/**/*",
+			"src/**/*",
 			"*.{js,json,jsonc}",
 			//
 			// Ignore build artefacts in the project root directory.

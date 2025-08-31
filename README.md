@@ -16,8 +16,8 @@ refine the dependency upgrade settings for your project:
 
 | Configuration                                                | Description                                                                                                                                                          |
 |--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `github>rainstormy/presets-renovate:automerge-build-patch`   | Automatically merges patch upgrades for select packages that affect the build artifacts deployed into production.                                                    |
-| `github>rainstormy/presets-renovate:automerge-runtime-patch` | Automatically merges patch upgrades for select packages bundled into the build artifacts deployed on the server or in the browser.                                   |
+| `github>rainstormy/presets-renovate:automerge-build-patch`   | Automatically merges patch upgrades for select packages that affect the build artefacts deployed into production.                                                    |
+| `github>rainstormy/presets-renovate:automerge-runtime-patch` | Automatically merges patch upgrades for select packages bundled into the build artefacts deployed on the server or in the browser.                                   |
 | `github>rainstormy/presets-renovate:automerge-tooling-patch` | Automatically merges patch upgrades for all GitHub Actions and for select packages related to testing, formatting, linting, type-checking, and developer experience. |
 | `github>rainstormy/presets-renovate:skip-nodejs-major`       | Ignores major upgrades for Node.js, which is useful to preserve backward compatibility in libraries.                                                                 |
 
@@ -36,8 +36,8 @@ For example:
     "github>rainstormy/presets-renovate:automerge-runtime-patch",
     "github>rainstormy/presets-renovate:automerge-tooling-patch"
   ],
-  "schedule": ["before 8am every weekday"],
-  "automergeSchedule": ["after 9am and before 3pm every weekday"],
+  "schedule": ["* 0-7 * * mon-fri"],
+  "automergeSchedule": ["* 9-14 * * mon-fri"],
   "timezone": "Europe/Copenhagen",
   "packageRules": [
     {

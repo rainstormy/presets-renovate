@@ -1,5 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package.json",
+	"name": "@rainstormy/presets-renovate",
+	"version": "1.4.0",
 	"private": true,
 	"bugs": "https://github.com/rainstormy/presets-renovate/issues",
 	"repository": {
@@ -9,22 +11,14 @@
 	"license": "MIT",
 	"author": "Steffen Diswal",
 	"type": "module",
-	"packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b",
-	"engines": {
-		"node": ">=20.0.0"
-	},
-	"scripts": {
-		"build": "node ./build.js",
-		"check": "pnpm check.fmt",
-		"check.fmt": "biome check --error-on-warnings",
-		"fmt": "biome check --write"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.2",
-		"@rainstormy/presets-biome": "2.0.0"
+		"@rainstormy/presets-biome": "2.0.0",
+		"lefthook": "1.12.2"
 	},
 	"// devDependencies": {
 		"@biomejs/biome": "Biome is an opinionated linter and code formatter.",
-		"@rainstormy/presets-biome": "This library provides predefined, opinionated Biome configurations."
+		"@rainstormy/presets-biome": "This library provides predefined, opinionated Biome configurations.",
+		"lefthook": "Lefthook is a Git hooks manager."
 	}
 }
