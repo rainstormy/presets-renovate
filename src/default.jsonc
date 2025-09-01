@@ -270,7 +270,17 @@
 		{
 			"commitMessageTopic": "Tailwind CSS",
 			"groupName": "Tailwind CSS",
-			"matchPackageNames": ["@tailwindcss/**", "tailwindcss"]
+			"matchPackageNames": [
+				"@tailwindcss/browser",
+				"@tailwindcss/cli",
+				"@tailwindcss/node",
+				"@tailwindcss/oxide",
+				"@tailwindcss/oxide-*",
+				"@tailwindcss/postcss",
+				"@tailwindcss/upgrade",
+				"@tailwindcss/vite",
+				"tailwindcss"
+			]
 		},
 		{
 			"commitMessageTopic": "TypeScript",
