@@ -17,6 +17,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 - Support `@mswjs/**` packages in the `automerge-tooling-patch` configuration.
+- Omit plugins like `@tailwindcss/forms` and `@tailwindcss/typography` from
+  Renovate pull requests that upgrade the
+  main [Tailwind CSS](https://tailwindcss.com) package group.
 
 ## [1.4.0] - 2025-06-15
 ### Added
