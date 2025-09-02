@@ -162,6 +162,11 @@
 			"matchDepNames": ["rainstormy/presets-lefthook"]
 		},
 		{
+			"commitMessageTopic": "Mentoss",
+			"groupName": "Mentoss",
+			"matchPackageNames": ["mentoss"]
+		},
+		{
 			"commitMessageTopic": "mise-en-place",
 			"groupName": "mise-en-place",
 			"matchDepNames": ["jdx/mise"],
@@ -180,7 +185,20 @@
 		{
 			"commitMessageTopic": "Next.js",
 			"groupName": "Next.js",
-			"matchPackageNames": ["next"]
+			"matchPackageNames": ["@next/**", "next"]
+		},
+		{
+			"commitMessageTopic": "Playwright",
+			"groupName": "Playwright",
+			"matchPackageNames": [
+				"@playwright/**",
+				"playwright",
+				"playwright-chromium",
+				"playwright-core",
+				"playwright-firefox",
+				"playwright-webkit",
+				"!@playwright/mcp"
+			]
 		},
 		{
 			"commitMessageTopic": "pnpm",

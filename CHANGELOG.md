@@ -10,6 +10,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `@chromatic-com/**` packages in the `automerge-tooling-patch` configuration.
 - Support [mise-en-place](https://mise.jdx.dev) in the `automerge-tooling-patch`
   configuration.
+- Support [Mentoss](https://github.com/humanwhocodes/mentoss) in the
+  `automerge-tooling-patch` configuration.
+- Support [Playwright](https://playwright.dev) in the `automerge-tooling-patch`
+  configuration.
 
 ### Changed
 - Upgrade [mise-en-place](https://mise.jdx.dev) only to the first release of a
@@ -20,6 +24,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Omit plugins like `@tailwindcss/forms` and `@tailwindcss/typography` from
   Renovate pull requests that upgrade the
   main [Tailwind CSS](https://tailwindcss.com) package group.
+- Recognise `@next/**` packages when upgrading [Next.js](https://nextjs.org).
 
 ## [1.4.0] - 2025-06-15
 ### Added
@@ -50,7 +55,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `automerge-runtime-patch` configuration.
 
 ### Fixed
-- Recognise `@tailwindcss/**` packages.
+- Recognise `@tailwindcss/**` packages when
+  upgrading [Tailwind CSS](https://tailwindcss.com).
 - Recognise `nodejs` as a Node.js identifier in the `skip-nodejs-major`
   configuration, as implemented by [mise-en-place](https://mise.jdx.dev) in
   `mise.toml`.
