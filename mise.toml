@@ -33,9 +33,25 @@ alias = ["cf"]
 
 [tasks.check_renovate]
 # language=sh
-run = "pnpm dlx --package renovate renovate-config-validator"
+run = """
+pnpm dlx --package renovate renovate-config-validator \
+  .github/renovate.json \
+  automerge-build-patch.json \
+  automerge-runtime-patch.json \
+  automerge-tooling-patch.json \
+  default.json \
+  skip-nodejs-major.json
+"""
 description = "Verifies the syntax of the Renovate configuration."
-sources = [".github/renovate.json"] # Only run this task if `renovate.json` has changed since the last run.
+sources = [
+	# Only run this task if `renovate.json` or a preset build artefact has changed since the last run.
+	".github/renovate.json",
+	"automerge-build-patch.json",
+	"automerge-runtime-patch.json",
+	"automerge-tooling-patch.json",
+	"default.json",
+	"skip-nodejs-major.json",
+]
 outputs = { auto = true }
 alias = ["cr"]
 

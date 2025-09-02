@@ -84,7 +84,7 @@ jobs:
       - name: Verify the Renovate configuration
         uses: ./.github/actions/task
         with:
-          cache-key: check_renovate:${{ hashFiles('.github/renovate.json') }}
+          cache-key: check_renovate:${{ hashFiles('.github/renovate.json', 'automerge-build-patch.json', 'automerge-runtime-patch.json', 'automerge-tooling-patch.json', 'default.json', 'skip-nodejs-major.json') }}
           cache-path: node_modules/.cache/renovate/
           # language=sh
           task: check_renovate
