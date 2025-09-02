@@ -162,6 +162,11 @@
 			"matchDepNames": ["rainstormy/presets-lefthook"]
 		},
 		{
+			"commitMessageTopic": "Mentoss",
+			"groupName": "Mentoss",
+			"matchPackageNames": ["mentoss"]
+		},
+		{
 			"commitMessageTopic": "mise-en-place",
 			"groupName": "mise-en-place",
 			"matchDepNames": ["jdx/mise"],

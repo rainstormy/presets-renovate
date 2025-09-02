@@ -28,6 +28,7 @@
 				"jest",
 				"jest-environment-jsdom",
 				"lefthook",
+				"mentoss",
 				"msw",
 				"pnpm",
 				"prettier",
