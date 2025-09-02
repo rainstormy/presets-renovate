@@ -12,6 +12,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   configuration.
 - Support [Mentoss](https://github.com/humanwhocodes/mentoss) in the
   `automerge-tooling-patch` configuration.
+- Support [Playwright](https://playwright.dev) in the `automerge-tooling-patch`
+  configuration.
 
 ### Changed
 - Upgrade [mise-en-place](https://mise.jdx.dev) only to the first release of a
