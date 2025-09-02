@@ -180,7 +180,7 @@
 		{
 			"commitMessageTopic": "Next.js",
 			"groupName": "Next.js",
-			"matchPackageNames": ["next"]
+			"matchPackageNames": ["@next/**", "next"]
 		},
 		{
 			"commitMessageTopic": "pnpm",

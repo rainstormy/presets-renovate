@@ -20,6 +20,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Omit plugins like `@tailwindcss/forms` and `@tailwindcss/typography` from
   Renovate pull requests that upgrade the
   main [Tailwind CSS](https://tailwindcss.com) package group.
+- Recognise `@next/**` packages when upgrading [Next.js](https://nextjs.org).
 
 ## [1.4.0] - 2025-06-15
 ### Added
@@ -50,7 +51,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `automerge-runtime-patch` configuration.
 
 ### Fixed
-- Recognise `@tailwindcss/**` packages.
+- Recognise `@tailwindcss/**` packages when
+  upgrading [Tailwind CSS](https://tailwindcss.com).
 - Recognise `nodejs` as a Node.js identifier in the `skip-nodejs-major`
   configuration, as implemented by [mise-en-place](https://mise.jdx.dev) in
   `mise.toml`.
