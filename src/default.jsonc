@@ -37,7 +37,7 @@
 			"customType": "regex",
 			"datasourceTemplate": "github-tags",
 			// language=JSRegexp
-			"fileMatch": ["(^|/)\\.?lefthook(-local)?\\.ya?ml$"],
+			"managerFilePatterns": ["(^|/)\\.?lefthook(-local)?\\.ya?ml$"],
 			// language=JSRegexp
 			"matchStrings": [
 				"git_url:\\s*(git@github\\.com:|https://github\\.com/)(?<depName>[A-Za-z0-9-]+/[A-Za-z0-9_.-]+)",
@@ -52,7 +52,9 @@
 			"datasourceTemplate": "github-tags",
 			"depNameTemplate": "jdx/mise",
 			// language=JSRegexp
-			"fileMatch": ["(^|/)(\\.config/)?mise(\\.local|/config)?\\.toml$"],
+			"managerFilePatterns": [
+				"(^|/)(\\.config/)?mise(\\.local|/config)?\\.toml$"
+			],
 			// language=JSRegexp
 			"matchStrings": ["min_version\\s*=\\s*['\"](?<currentValue>\\S+)['\"]"],
 			"matchStringsStrategy": "combination"
