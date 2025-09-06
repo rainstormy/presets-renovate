@@ -24,9 +24,13 @@
 	// In Homebrew, APT, and Yarn, the term 'upgrade' means installing new versions of packages
 	// while 'update' means refreshing the package index.
 	// npm and pnpm use both terms interchangeably.
+	// language=handlebars
 	"commitMessageAction": "Upgrade",
+	// language=handlebars
 	"commitMessageTopic": "{{#if isGroup}}{{{groupName}}}{{else}}`{{depName}}`{{/if}}",
+	// language=handlebars
 	"commitMessageExtra": "to {{{replace '^v' '' newVersion}}}",
+	// language=handlebars
 	"commitMessageSuffix": "",
 	//
 	// https://docs.renovatebot.com/modules/manager/regex
@@ -230,12 +234,7 @@
 		{
 			"commitMessageTopic": "React",
 			"groupName": "React",
-			"matchPackageNames": [
-				"react",
-				"react-dom",
-				"@types/react",
-				"@types/react-dom"
-			]
+			"matchPackageNames": ["react", "react-dom"]
 		},
 		{
 			"commitMessageTopic": "React Router",
