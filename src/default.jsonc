@@ -17,17 +17,12 @@
 	"stopUpdatingLabel": "suspended",
 	//
 	// Make commit messages pretty and human-friendly.
-	//
 	// Discard the 'v' prefix from the version number.
-	//
 	// Use the verb 'upgrade' instead of 'update'. Unlike 'update', the verb 'upgrade' has a counterpart in 'downgrade'.
-	// In Homebrew, APT, and Yarn, the term 'upgrade' means installing new versions of packages
-	// while 'update' means refreshing the package index.
+	// In Homebrew, APT, and Yarn, the term 'upgrade' means installing new versions of packages while 'update' means refreshing the package index.
 	// npm and pnpm use both terms interchangeably.
 	// language=handlebars
 	"commitMessageAction": "Upgrade",
-	// language=handlebars
-	"commitMessageTopic": "{{#if isGroup}}{{{groupName}}}{{else}}`{{depName}}`{{/if}}",
 	// language=handlebars
 	"commitMessageExtra": "to {{{replace '^v' '' newVersion}}}",
 	// language=handlebars
@@ -65,116 +60,105 @@
 		}
 	],
 	//
-	// Refer to select packages by their actual name instead of their npm package name.
+	// Prefer commit messages referring to dependencies by their human name instead of their identifier (e.g. npm package name).
 	// Expand this list as needed.
 	//
-	// For npm dependencies, specify both `commitMessageTopic` and `groupName`
-	// to cover the case when only one package in a group needs an upgrade and
-	// to make it more convenient to group dependencies in the future.
+	// Use groups to upgrade multiple dependencies in a single pull request.
+	// All dependencies in a group must be released in sync, i.e. have the same version number.
+	// Note that Renovate only recognises a group when a pull request needs to upgrade more than one dependency.
+	// If the user has installed only a single dependency in a group, Renovate will not recognise the group.
+	// Thus, we need to specify both `commitMessageTopic` and `groupName` for commit messages, and `branchTopic` and `groupSlug` for branch names.
 	"packageRules": [
 		{
-			"matchDatasources": ["docker"],
+			"matchDepNames": ["*"],
+			// language=handlebars
+			"commitMessageTopic": "`{{depName}}`"
+		},
+		{
+			"matchManagers": ["dockerfile", "docker-compose"],
+			// language=handlebars
 			"commitMessageTopic": "`{{depName}}` in Docker",
 			"pinDigests": true
 		},
 		{
 			"matchManagers": ["github-actions"],
+			// language=handlebars
 			"commitMessageTopic": "`{{depName}}` in GitHub Actions",
 			"pinDigests": true
 		},
 		{
 			"matchManagers": ["terraform"],
+			// language=handlebars
 			"commitMessageTopic": "`{{depName}}` in Terraform",
 			"pinDigests": false
 		},
 		{
-			"matchDatasources": ["npm"],
+			"matchManagers": ["npm"],
 			"minimumReleaseAge": "3 days"
 		},
 		{
-			"commitMessageTopic": "Node.js",
-			"groupName": "Node.js",
-			"matchPackageNames": ["node", "nodejs"]
-		},
-		{
 			"commitMessageTopic": "Ansis",
-			"groupName": "Ansis",
-			"matchPackageNames": ["ansis"]
+			"matchDepNames": ["ansis"]
 		},
 		{
 			"commitMessageTopic": "Astro",
-			"groupName": "Astro",
-			"matchPackageNames": ["astro"]
+			"matchDepNames": ["astro"]
 		},
 		{
 			"commitMessageTopic": "Autoprefixer",
-			"groupName": "Autoprefixer",
-			"matchPackageNames": ["autoprefixer"]
+			"matchDepNames": ["autoprefixer"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "biome-{{newMajor}}.x",
 			"commitMessageTopic": "Biome",
-			"groupName": "Biome",
-			"matchPackageNames": ["@biomejs/biome"],
+			"matchDepNames": ["@biomejs/biome"],
 			"minimumReleaseAge": "0"
 		},
 		{
+			// language=handlebars
+			"branchTopic": "biome-presets-{{newMajor}}.x",
 			"commitMessageTopic": "the Biome presets",
-			"groupName": "the Biome presets",
-			"matchPackageNames": ["@rainstormy/presets-biome"]
+			"matchDepNames": ["@rainstormy/presets-biome"]
 		},
 		{
 			"commitMessageTopic": "the Chromatic CLI",
-			"groupName": "the Chromatic CLI",
-			"matchPackageNames": ["chromatic"]
-		},
-		{
-			"commitMessageTopic": "the DOM Testing Library",
-			"groupName": "the DOM Testing Library",
-			"matchPackageNames": ["@testing-library/dom"]
+			"matchDepNames": ["chromatic"]
 		},
 		{
 			"commitMessageTopic": "ESLint",
-			"groupName": "ESLint",
-			"matchPackageNames": ["eslint"]
+			"matchDepNames": ["eslint"]
 		},
 		{
 			"commitMessageTopic": "Headless UI",
-			"groupName": "Headless UI",
-			"matchPackageNames": ["@headlessui/react", "@headlessui/vue"]
+			"matchDepNames": ["@headlessui/react"]
 		},
 		{
 			"commitMessageTopic": "HLS.js",
-			"groupName": "HLS.js",
-			"matchPackageNames": ["hls.js"]
+			"matchDepNames": ["hls.js"]
 		},
 		{
 			"commitMessageTopic": "Howler",
-			"groupName": "Howler",
-			"matchPackageNames": ["howler"]
+			"matchDepNames": ["howler"]
 		},
 		{
 			"commitMessageTopic": "Jest",
-			"groupName": "Jest",
-			"matchPackageNames": ["jest", "jest-environment-jsdom"]
+			"matchDepNames": ["jest"]
 		},
 		{
 			"commitMessageTopic": "Lefthook",
-			"groupName": "Lefthook",
-			"matchPackageNames": ["lefthook"]
+			"matchDepNames": ["lefthook"]
 		},
 		{
 			"commitMessageTopic": "the Lefthook presets",
-			"groupName": "the Lefthook presets",
 			"matchDepNames": ["rainstormy/presets-lefthook"]
 		},
 		{
 			"commitMessageTopic": "Mentoss",
-			"groupName": "Mentoss",
-			"matchPackageNames": ["mentoss"]
+			"matchDepNames": ["mentoss"]
 		},
 		{
 			"commitMessageTopic": "mise-en-place",
-			"groupName": "mise-en-place",
 			"matchDepNames": ["jdx/mise"],
 			//
 			// Currently, mise-en-place has a very frequent release cadence.
@@ -185,18 +169,34 @@
 		},
 		{
 			"commitMessageTopic": "Mock Service Worker",
-			"groupName": "Mock Service Worker",
-			"matchPackageNames": ["msw"]
+			"matchDepNames": ["msw"]
 		},
 		{
-			"commitMessageTopic": "Next.js",
+			// language=handlebars
+			"groupSlug": "next-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "next-{{newMajor}}.x",
 			"groupName": "Next.js",
-			"matchPackageNames": ["@next/**", "next"]
+			"commitMessageTopic": "Next.js",
+			"matchDepNames": ["@next/**", "next"]
 		},
 		{
-			"commitMessageTopic": "Playwright",
+			// language=handlebars
+			"groupSlug": "node-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "node-{{newMajor}}.x",
+			"groupName": "Node.js",
+			"commitMessageTopic": "Node.js",
+			"matchDepNames": ["node"]
+		},
+		{
+			// language=handlebars
+			"groupSlug": "playwright-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "playwright-{{newMajor}}.x",
 			"groupName": "Playwright",
-			"matchPackageNames": [
+			"commitMessageTopic": "Playwright",
+			"matchDepNames": [
 				"@playwright/**",
 				"playwright",
 				"playwright-chromium",
@@ -208,88 +208,98 @@
 		},
 		{
 			"commitMessageTopic": "pnpm",
-			"groupName": "pnpm",
 			"matchDepNames": ["pnpm"]
 		},
 		{
 			"commitMessageTopic": "PostCSS",
-			"groupName": "PostCSS",
-			"matchPackageNames": ["postcss"]
+			"matchDepNames": ["postcss"]
 		},
 		{
 			"commitMessageTopic": "Preact",
-			"groupName": "Preact",
-			"matchPackageNames": ["preact"]
-		},
-		{
-			"commitMessageTopic": "the Preact Testing Library",
-			"groupName": "the Preact Testing Library",
-			"matchPackageNames": ["@testing-library/preact"]
+			"matchDepNames": ["preact"]
 		},
 		{
 			"commitMessageTopic": "Prettier",
-			"groupName": "Prettier",
-			"matchPackageNames": ["prettier"]
+			"matchDepNames": ["prettier"]
 		},
 		{
-			"commitMessageTopic": "React",
+			// language=handlebars
+			"groupSlug": "react-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "react-{{newMajor}}.x",
 			"groupName": "React",
-			"matchPackageNames": ["react", "react-dom"]
+			"commitMessageTopic": "React",
+			"matchDepNames": ["react", "react-dom"]
 		},
 		{
-			"commitMessageTopic": "React Router",
+			// language=handlebars
+			"groupSlug": "react-router-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "react-router-{{newMajor}}.x",
 			"groupName": "React Router",
-			"matchPackageNames": ["react-router", "react-router-dom"]
+			"commitMessageTopic": "React Router",
+			"matchDepNames": ["react-router", "react-router-dom"]
 		},
 		{
-			"commitMessageTopic": "the React Testing Library",
-			"groupName": "the React Testing Library",
-			"matchPackageNames": ["@testing-library/react"]
-		},
-		{
-			"commitMessageTopic": "the Redis client for Node.js",
+			// language=handlebars
+			"groupSlug": "redis-node-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "redis-node-{{newMajor}}.x",
 			"groupName": "the Redis client for Node.js",
-			"matchPackageNames": ["@redis/**", "redis"]
+			"commitMessageTopic": "the Redis client for Node.js",
+			"matchDepNames": ["@redis/**", "redis"]
 		},
 		{
-			"commitMessageTopic": "Remix",
+			// language=handlebars
+			"groupSlug": "remix-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "remix-{{newMajor}}.x",
 			"groupName": "Remix",
-			"matchPackageNames": ["@remix-run/**"]
+			"commitMessageTopic": "Remix",
+			"matchDepNames": ["@remix-run/**"]
 		},
 		{
-			"commitMessageTopic": "Snowplow",
+			// language=handlebars
+			"groupSlug": "snowplow-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "snowplow-{{newMajor}}.x",
 			"groupName": "Snowplow",
-			"matchPackageNames": ["@snowplow/**"]
+			"commitMessageTopic": "Snowplow",
+			"matchDepNames": ["@snowplow/**"]
 		},
 		{
 			"commitMessageTopic": "Solid",
-			"groupName": "Solid",
-			"matchPackageNames": ["solid-js"]
+			"matchDepNames": ["solid-js"]
 		},
 		{
 			"commitMessageTopic": "Solid Router",
-			"groupName": "Solid Router",
-			"matchPackageNames": ["@solidjs/router"]
+			"matchDepNames": ["@solidjs/router"]
 		},
 		{
 			"commitMessageTopic": "SolidStart",
-			"groupName": "SolidStart",
-			"matchPackageNames": ["@solidjs/start"]
+			"matchDepNames": ["@solidjs/start"]
 		},
 		{
-			"commitMessageTopic": "Storybook",
+			// language=handlebars
+			"groupSlug": "storybook-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "storybook-{{newMajor}}.x",
 			"groupName": "Storybook",
-			"matchPackageNames": ["@storybook/**", "storybook"]
+			"commitMessageTopic": "Storybook",
+			"matchDepNames": ["@storybook/**", "storybook"]
 		},
 		{
 			"commitMessageTopic": "SVGO",
-			"groupName": "SVGO",
-			"matchPackageNames": ["svgo"]
+			"matchDepNames": ["svgo"]
 		},
 		{
-			"commitMessageTopic": "Tailwind CSS",
+			// language=handlebars
+			"groupSlug": "tailwindcss-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "tailwindcss-{{newMajor}}.x",
 			"groupName": "Tailwind CSS",
-			"matchPackageNames": [
+			"commitMessageTopic": "Tailwind CSS",
+			"matchDepNames": [
 				"@tailwindcss/browser",
 				"@tailwindcss/cli",
 				"@tailwindcss/node",
@@ -302,75 +312,80 @@
 			]
 		},
 		{
+			"groupSlug": "types",
+			"branchTopic": "types",
 			"groupName": "type definitions",
-			// language=handlebars
-			"commitMessageTopic": "{{groupName}}",
+			"commitMessageTopic": "type definitions",
 			"matchDepNames": ["@types/**"]
 		},
 		{
 			"commitMessageTopic": "TypeScript",
-			"groupName": "TypeScript",
-			"matchPackageNames": ["typescript"]
+			"matchDepNames": ["typescript"]
 		},
 		{
 			"commitMessageTopic": "the TypeScript presets",
-			"groupName": "the TypeScript presets",
-			"matchPackageNames": ["@rainstormy/presets-typescript"]
+			"matchDepNames": ["@rainstormy/presets-typescript"]
 		},
 		{
 			"commitMessageTopic": "Undici",
-			"groupName": "Undici",
-			"matchPackageNames": ["undici"]
+			"matchDepNames": ["undici"]
 		},
 		{
 			"commitMessageTopic": "Updraft",
-			"groupName": "Updraft",
-			"matchPackageNames": ["@rainstormy/updraft"]
+			"matchDepNames": ["@rainstormy/updraft"]
 		},
 		{
 			"commitMessageTopic": "Valibot",
-			"groupName": "Valibot",
-			"matchPackageNames": ["valibot"]
+			"matchDepNames": ["valibot"]
 		},
 		{
 			"commitMessageTopic": "Vike",
-			"groupName": "Vike",
-			"matchPackageNames": ["vike"]
+			"matchDepNames": ["vike"]
 		},
 		{
 			"commitMessageTopic": "Vinxi",
-			"groupName": "Vinxi",
-			"matchPackageNames": ["vinxi"]
+			"matchDepNames": ["vinxi"]
 		},
 		{
 			"commitMessageTopic": "Vite",
-			"groupName": "Vite",
-			"matchPackageNames": ["vite"]
+			"matchDepNames": ["vite"]
 		},
 		{
-			"commitMessageTopic": "Vitest",
+			// language=handlebars
+			"groupSlug": "vitest-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "vitest-{{newMajor}}.x",
 			"groupName": "Vitest",
-			"matchPackageNames": ["@vitest/**", "vitest"]
+			"commitMessageTopic": "Vitest",
+			"matchDepNames": ["@vitest/**", "vitest"]
 		},
 		{
 			"commitMessageTopic": "Vue",
-			"groupName": "Vue",
-			"matchPackageNames": ["vue"]
+			"matchDepNames": ["vue"]
 		},
 		{
 			"commitMessageTopic": "Vue Router",
-			"groupName": "Vue Router",
-			"matchPackageNames": ["vue-router"]
+			"matchDepNames": ["vue-router"]
+		},
+		{
+			"commitMessageTopic": "the DOM Testing Library",
+			"matchDepNames": ["@testing-library/dom"]
+		},
+		{
+			"commitMessageTopic": "the Preact Testing Library",
+			"matchDepNames": ["@testing-library/preact"]
+		},
+		{
+			"commitMessageTopic": "the React Testing Library",
+			"matchDepNames": ["@testing-library/react"]
 		},
 		{
 			"commitMessageTopic": "the Vue Testing Library",
-			"groupName": "the Vue Testing Library",
-			"matchPackageNames": ["@testing-library/vue"]
+			"matchDepNames": ["@testing-library/vue"]
 		},
 		{
 			"commitMessageTopic": "Zod",
-			"groupName": "Zod",
-			"matchPackageNames": ["zod"]
+			"matchDepNames": ["zod"]
 		}
 	]
 }
