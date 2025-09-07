@@ -302,6 +302,12 @@
 			]
 		},
 		{
+			"groupName": "type definitions",
+			// language=handlebars
+			"commitMessageTopic": "{{groupName}}",
+			"matchDepNames": ["@types/**"]
+		},
+		{
 			"commitMessageTopic": "TypeScript",
 			"groupName": "TypeScript",
 			"matchPackageNames": ["typescript"]

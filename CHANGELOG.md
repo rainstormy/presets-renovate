@@ -6,6 +6,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 ### Changed
+- Group type definitions into a single pull request.
 - Omit `@types/react` and `@types/react-dom` from Renovate pull requests that
   upgrade the main [React](https://react.dev) package group.
 
