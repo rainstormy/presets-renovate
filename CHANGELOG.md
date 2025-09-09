@@ -5,6 +5,8 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.5.1] - 2025-09-09
 ### Changed
 - Group type definitions into a single pull request.
 - Omit `@types/react` and `@types/react-dom` from Renovate pull requests that
@@ -94,7 +96,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [MIT license](https://choosealicense.com/licenses/mit).
 - New configuration: `github>rainstormy/presets-renovate`.
 
-[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.5.0...HEAD
+[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.5.1...HEAD
+[1.5.1]: https://github.com/rainstormy/presets-renovate/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/rainstormy/presets-renovate/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/rainstormy/presets-renovate/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/rainstormy/presets-renovate/compare/v1.3.0...v1.3.1
