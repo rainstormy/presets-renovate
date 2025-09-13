@@ -41,7 +41,7 @@ For example:
   "timezone": "Europe/Copenhagen",
   "packageRules": [
     {
-      "matchPackageNames": [
+      "matchDepNames": [
         "@storybook/**",
         "@vitest/**",
         "storybook",

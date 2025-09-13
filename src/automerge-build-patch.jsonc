@@ -4,7 +4,7 @@
 		{
 			// Merge patch upgrades of Node.js packages that generate the build
 			// artefacts deployed into production.
-			"matchPackageNames": [
+			"matchDepNames": [
 				"@tailwindcss/**",
 				"autoprefixer",
 				"postcss",
