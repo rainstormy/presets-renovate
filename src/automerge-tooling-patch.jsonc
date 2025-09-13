@@ -9,7 +9,7 @@
 		},
 		{
 			// Merge patch upgrades of Node.js packages in the developer toolchain.
-			"matchPackageNames": [
+			"matchDepNames": [
 				"@biomejs/biome",
 				"@chromatic-com/**",
 				"@mswjs/**",
