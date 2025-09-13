@@ -39,6 +39,7 @@
 				"pnpm",
 				"prettier",
 				"storybook",
+				"testcontainers",
 				"typescript",
 				"vitest"
 			],

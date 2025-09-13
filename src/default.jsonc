@@ -312,6 +312,10 @@
 			]
 		},
 		{
+			"commitMessageTopic": "Testcontainers",
+			"matchDepNames": ["testcontainers"]
+		},
+		{
 			"groupSlug": "types",
 			"branchTopic": "types",
 			"groupName": "type definitions",
