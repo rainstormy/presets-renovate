@@ -31,13 +31,20 @@
 	// https://docs.renovatebot.com/modules/manager/regex
 	"customManagers": [
 		{
-			// Support upgrading remote Lefthook configurations.
+			// Support upgrading remote Lefthook configurations in YAML files.
+			// https://lefthook.dev/configuration/index.html
 			// https://lefthook.dev/configuration/remotes.html
 			"customType": "regex",
 			"datasourceTemplate": "github-tags",
-			// language=JSRegexp
-			"managerFilePatterns": ["(^|/)\\.?lefthook(-local)?\\.ya?ml$"],
-			// language=JSRegexp
+			"managerFilePatterns": [
+				"lefthook.{yml,yaml}",
+				"lefthook-local.{yml,yaml}",
+				".lefthook.{yml,yaml}",
+				".lefthook-local.{yml,yaml}",
+				".config/lefthook.{yml,yaml}",
+				".config/lefthook-local.{yml,yaml}"
+			],
+			// language=jsregexp
 			"matchStrings": [
 				"git_url:\\s*(git@github\\.com:|https://github\\.com/)(?<depName>[A-Za-z0-9-]+/[A-Za-z0-9_.-]+)",
 				"ref:\\s*(?<currentValue>\\S+)"
@@ -50,11 +57,17 @@
 			"customType": "regex",
 			"datasourceTemplate": "github-tags",
 			"depNameTemplate": "jdx/mise",
-			// language=JSRegexp
 			"managerFilePatterns": [
-				"(^|/)(\\.config/)?mise(\\.local|/config)?\\.toml$"
+				"mise.*.toml",
+				"mise.toml",
+				"mise/config.toml",
+				".mise.*.toml",
+				".mise.toml",
+				".mise/config.toml",
+				".config/mise.toml",
+				".config/mise/config.toml"
 			],
-			// language=JSRegexp
+			// language=jsregexp
 			"matchStrings": ["min_version\\s*=\\s*['\"](?<currentValue>\\S+)['\"]"],
 			"matchStringsStrategy": "combination"
 		}
@@ -164,7 +177,8 @@
 			// Currently, mise-en-place has a very frequent release cadence.
 			// Its versioning scheme is date-based instead of SemVer.
 			// Upgrading only to major and minor versions results in a monthly upgrade.
-			"allowedVersions": "/^\\d+\\.\\d+\\.0$/",
+			// language=jsregexp
+			"allowedVersions": "/\\d+\\.\\d+\\.0/",
 			"rangeStrategy": "replace"
 		},
 		{

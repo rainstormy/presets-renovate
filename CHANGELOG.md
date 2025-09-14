@@ -12,6 +12,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 - Omit the version number in the commit message of type definition upgrades.
 
+### Fixed
+- Use glob pattern syntax in custom managers for
+  remote [Lefthook](https://lefthook.dev) configurations
+  and [mise-en-place](https://mise.jdx.dev).
+
 ## [1.5.1] - 2025-09-09
 ### Changed
 - Group type definitions into a single pull request.
@@ -41,6 +46,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   Renovate pull requests that upgrade the
   main [Tailwind CSS](https://tailwindcss.com) package group.
 - Recognise `@next/**` packages when upgrading [Next.js](https://nextjs.org).
+- Rename `fileMatch` to `managerFilePatterns` in custom managers for
+  remote [Lefthook](https://lefthook.dev) configurations
+  and [mise-en-place](https://mise.jdx.dev).
 
 ## [1.4.0] - 2025-06-15
 ### Added
