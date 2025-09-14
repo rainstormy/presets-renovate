@@ -11,6 +11,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 - Omit the version number in the commit message of type definition upgrades.
+- Exclude major type definition upgrades from package groups.
 
 ### Fixed
 - Use glob pattern syntax in custom managers for
