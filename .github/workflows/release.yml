@@ -57,6 +57,7 @@ jobs:
         uses: ./.github/actions/build-artefacts
         #
       - name: Move build artefacts to the project root directory
+        # language=sh
         run: mv --force dist/*.json ./
         #
       - name: Update the release artefacts

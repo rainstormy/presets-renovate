@@ -173,10 +173,8 @@
 		{
 			"commitMessageTopic": "mise-en-place",
 			"matchDepNames": ["jdx/mise"],
-			//
-			// Currently, mise-en-place has a very frequent release cadence.
-			// Its versioning scheme is date-based instead of SemVer.
-			// Upgrading only to major and minor versions results in a monthly upgrade.
+			// mise-en-place has a high release frequency. Upgrade only to the first release of a month to reduce the number of pull requests opened by Renovate.
+			// Its versioning scheme is date-based instead of SemVer (`<year>.<month>.<day>`).
 			// language=jsregexp
 			"allowedVersions": "/\\d+\\.\\d+\\.0/",
 			"rangeStrategy": "replace"
@@ -341,6 +339,14 @@
 		{
 			"commitMessageTopic": "TypeScript",
 			"matchDepNames": ["typescript"]
+		},
+		{
+			"commitMessageTopic": "tsgo",
+			"matchDepNames": ["@typescript/native-preview"],
+			// tsgo has a high release frequency. Upgrade only to the first release of a month to reduce the number of pull requests opened by Renovate.
+			// language=jsregexp
+			"allowedVersions": "/7\\.0\\.0-dev\\.\\d+01.1/",
+			"rangeStrategy": "replace"
 		},
 		{
 			"commitMessageTopic": "the TypeScript presets",
