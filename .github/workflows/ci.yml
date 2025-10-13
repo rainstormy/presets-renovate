@@ -42,7 +42,7 @@ jobs:
       # To review the commit messages in the pull request.
       pull-requests: read
     steps:
-      - name: Verify that the commit messages are standardised
+      - name: Verify the commit messages
         uses: rainstormy/github-action-validate-commit-messages@84da2861892ba8268c8be58a0f5dd8b18292132f # v1.1.9
         with:
           github-token: ${{ github.token }}
