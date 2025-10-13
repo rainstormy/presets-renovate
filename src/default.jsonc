@@ -110,6 +110,10 @@
 			"minimumReleaseAge": "3 days"
 		},
 		{
+			"commitMessageTopic": "actionlint",
+			"matchDepNames": ["actionlint"]
+		},
+		{
 			"commitMessageTopic": "Ansis",
 			"matchDepNames": ["ansis"]
 		},

@@ -25,6 +25,7 @@
 				"@types/**",
 				"@typescript/native-preview",
 				"@vitest/**",
+				"actionlint",
 				"chromatic",
 				"eslint",
 				"jest",
