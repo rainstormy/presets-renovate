@@ -6,6 +6,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 ### Added
+- Support [actionlint](https://github.com/rhysd/actionlint) in the
+  `automerge-tooling-patch` configuration.
 - Support [tsgo](https://github.com/microsoft/typescript-go) in the
   `automerge-tooling-patch` configuration.
 
