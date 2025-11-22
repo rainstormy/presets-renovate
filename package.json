@@ -12,7 +12,7 @@
 	"author": "Steffen Diswal",
 	"type": "module",
 	"devDependencies": {
-		"@biomejs/biome": "2.2.4",
+		"@biomejs/biome": "2.3.7",
 		"@rainstormy/presets-biome": "2.0.3",
 		"lefthook": "2.0.4"
 	},
