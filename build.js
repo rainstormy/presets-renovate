@@ -2,11 +2,11 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises"
 
 const sourceDirectory = "src"
 const destinationDirectory = "dist"
+
+const filenames = await readdir(sourceDirectory)
 const reservedFilenames = ["biome.json", "package.json"]
 
 await mkdir(destinationDirectory, { recursive: true })
-
-const filenames = await readdir("src")
 await Promise.all(filenames.map(buildFile))
 
 async function buildFile(filename) {
@@ -21,17 +21,18 @@ async function buildFile(filename) {
 
 	try {
 		const content = await readFile(sourcePath, "utf8")
-		const output = minifyJson(removeJsonLineComments(content))
-		await writeFile(destinationPath, output, "utf8")
+		const jsonContent = removeJsonLineComments(content)
+
+		// Discard the `$schema` field.
+		const { $schema: _ignored, ...fieldsToKeep } = JSON.parse(jsonContent)
+
+		const minifiedOutput = JSON.stringify(fieldsToKeep)
+		await writeFile(destinationPath, minifiedOutput, "utf8")
 	} catch (error) {
 		throw new Error(`${filename}: ${error.message}.`)
 	}
 }
 
-function removeJsonLineComments(jsonContent) {
-	return jsonContent.replace(/(?<=["}\]0-9e],?\s|\t)\/\/.*$/gm, "")
-}
-
-function minifyJson(jsonContent) {
-	return JSON.stringify(JSON.parse(jsonContent))
+function removeJsonLineComments(jsoncContent) {
+	return jsoncContent.replace(/(?<=["}\]0-9e],?\s|\t)\/\/.*$/gm, "")
 }
