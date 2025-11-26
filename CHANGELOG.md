@@ -8,6 +8,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - Support the [AWS SDK](https://aws.amazon.com/sdk-for-javascript) for
   JavaScript in the `automerge-runtime-patch` configuration.
+- Support
+  the [Jest DOM Testing Library](https://testing-library.com/docs/ecosystem-jest-dom)
+  in the `automerge-tooling-patch` configuration.
 - Support [Terraform](https://terraform.io) in the
   `automerge-tooling-patch` configuration.
 

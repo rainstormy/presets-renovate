@@ -429,6 +429,10 @@
 			"matchDepNames": ["@testing-library/dom"]
 		},
 		{
+			"commitMessageTopic": "the Jest DOM Testing Library",
+			"matchDepNames": ["@testing-library/jest-dom"]
+		},
+		{
 			"commitMessageTopic": "the Preact Testing Library",
 			"matchDepNames": ["@testing-library/preact"]
 		},
