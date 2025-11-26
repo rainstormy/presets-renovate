@@ -5,6 +5,7 @@
 			// Merge patch upgrades of Node.js packages bundled into production
 			// artefacts on the server or the browser.
 			"matchDepNames": [
+				"@aws-sdk/**",
 				"@headlessui/react",
 				"@headlessui/vue",
 				"@next/**",

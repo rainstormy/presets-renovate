@@ -6,6 +6,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 ### Added
+- Support the [AWS SDK](https://aws.amazon.com/sdk-for-javascript) for
+  JavaScript in the `automerge-runtime-patch` configuration.
 - Support [Terraform](https://terraform.io) in the
   `automerge-tooling-patch` configuration.
 

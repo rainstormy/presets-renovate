@@ -129,6 +129,20 @@
 		},
 		{
 			// language=handlebars
+			"groupSlug": "aws-sdk-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "aws-sdk-{{newMajor}}.x",
+			"groupName": "the AWS SDK for JavaScript",
+			"commitMessageTopic": "the AWS SDK for JavaScript",
+			"matchDepNames": ["@aws-sdk/**"],
+			// The AWS SDK for JavaScript has a high release frequency. Upgrade only to every 20th release (corresponds to every 4th week) to reduce the number of pull requests opened by Renovate.
+			// Its versioning scheme is incremental on the minor version instead of SemVer (`3.<minor>.0`).
+			// language=jsregexp
+			"allowedVersions": "/\\d+\\.(0|\\d*[02468]0)\\.0/",
+			"rangeStrategy": "replace"
+		},
+		{
+			// language=handlebars
 			"branchTopic": "biome-{{newMajor}}.x",
 			"commitMessageTopic": "Biome",
 			"matchDepNames": ["@biomejs/biome"],
