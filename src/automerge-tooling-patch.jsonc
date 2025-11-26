@@ -50,7 +50,11 @@
 		},
 		{
 			// Merge patch upgrades of other dependencies in the developer toolchain.
-			"matchDepNames": ["rainstormy/presets-lefthook"],
+			"matchDepNames": [
+				"hashicorp/terraform",
+				"rainstormy/presets-lefthook",
+				"terraform"
+			],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
 		},

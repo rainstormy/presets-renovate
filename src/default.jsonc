@@ -81,6 +81,8 @@
 	// Note that Renovate only recognises a group when a pull request needs to upgrade more than one dependency.
 	// If the user has installed only a single dependency in a group, Renovate will not recognise the group.
 	// Thus, we need to specify both `commitMessageTopic` and `groupName` for commit messages, and `branchTopic` and `groupSlug` for branch names.
+	//
+	// Package rules are ordered by precedence. Later rules partially override earlier ones when the 'match' conditions are met.
 	"packageRules": [
 		{
 			"matchDepNames": ["*"],
@@ -328,6 +330,15 @@
 				"@tailwindcss/vite",
 				"tailwindcss"
 			]
+		},
+		{
+			// language=handlebars
+			"groupSlug": "terraform-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "terraform-{{newMajor}}.x",
+			"groupName": "Terraform",
+			"commitMessageTopic": "Terraform",
+			"matchDepNames": ["hashicorp/terraform", "terraform"]
 		},
 		{
 			"commitMessageTopic": "Testcontainers",
