@@ -11,8 +11,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Support
   the [Jest DOM Testing Library](https://testing-library.com/docs/ecosystem-jest-dom)
   in the `automerge-tooling-patch` configuration.
-- Support [Terraform](https://terraform.io) in the
-  `automerge-tooling-patch` configuration.
+- Support [Terraform](https://terraform.io) in the `automerge-tooling-patch`
+  configuration.
+- Support [Valkey](https://valkey.io)
+  and [Valkey GLIDE](https://github.com/valkey-io/valkey-glide) in the
+  `automerge-runtime-patch` configuration.
 
 ## [1.7.0] - 2025-10-19
 ### Added

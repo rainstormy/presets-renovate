@@ -14,6 +14,7 @@
 				"@snowplow/**",
 				"@solidjs/router",
 				"@solidjs/start",
+				"@valkey/valkey-glide",
 				"ansis",
 				"astro",
 				"hls.js",
@@ -33,6 +34,12 @@
 				"vue-router",
 				"zod"
 			],
+			"matchUpdateTypes": ["patch"],
+			"automerge": true
+		},
+		{
+			// Merge patch upgrades of other runtime dependencies.
+			"matchDepNames": ["valkey/valkey"],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
 		}
