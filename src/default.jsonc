@@ -298,6 +298,39 @@
 		},
 		{
 			// language=handlebars
+			"groupSlug": "sentry-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "sentry-{{newMajor}}.x",
+			"groupName": "Sentry",
+			"commitMessageTopic": "Sentry",
+			"matchDepNames": [
+				"@sentry/**",
+				"!@sentry/cli",
+				"!@sentry/cli-*",
+				"!@sentry/*-plugin",
+				"!@sentry/*-plugin-*"
+			]
+		},
+		{
+			// language=handlebars
+			"groupSlug": "sentry-cli-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "sentry-cli-{{newMajor}}.x",
+			"groupName": "the Sentry CLI",
+			"commitMessageTopic": "the Sentry CLI",
+			"matchDepNames": ["@sentry/cli", "@sentry/cli-*"]
+		},
+		{
+			// language=handlebars
+			"groupSlug": "sentry-plugins-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "sentry-plugins-{{newMajor}}.x",
+			"groupName": "Sentry plugins",
+			"commitMessageTopic": "Sentry plugins",
+			"matchDepNames": ["@sentry/*-plugin", "@sentry/*-plugin-*"]
+		},
+		{
+			// language=handlebars
 			"groupSlug": "snowplow-{{newMajor}}.x",
 			// language=handlebars
 			"branchTopic": "snowplow-{{newMajor}}.x",

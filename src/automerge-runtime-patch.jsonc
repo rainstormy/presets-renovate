@@ -11,6 +11,7 @@
 				"@next/**",
 				"@redis/**",
 				"@remix-run/**",
+				"@sentry/**",
 				"@snowplow/**",
 				"@solidjs/router",
 				"@solidjs/start",
