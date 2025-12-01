@@ -5,14 +5,17 @@
 			// Merge patch upgrades of Node.js packages bundled into production
 			// artefacts on the server or the browser.
 			"matchDepNames": [
+				"@aws-sdk/**",
 				"@headlessui/react",
 				"@headlessui/vue",
 				"@next/**",
 				"@redis/**",
 				"@remix-run/**",
+				"@sentry/**",
 				"@snowplow/**",
 				"@solidjs/router",
 				"@solidjs/start",
+				"@valkey/valkey-glide",
 				"ansis",
 				"astro",
 				"hls.js",
@@ -32,6 +35,12 @@
 				"vue-router",
 				"zod"
 			],
+			"matchUpdateTypes": ["patch"],
+			"automerge": true
+		},
+		{
+			// Merge patch upgrades of other runtime dependencies.
+			"matchDepNames": ["valkey/valkey"],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
 		}

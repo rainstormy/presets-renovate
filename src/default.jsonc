@@ -81,6 +81,8 @@
 	// Note that Renovate only recognises a group when a pull request needs to upgrade more than one dependency.
 	// If the user has installed only a single dependency in a group, Renovate will not recognise the group.
 	// Thus, we need to specify both `commitMessageTopic` and `groupName` for commit messages, and `branchTopic` and `groupSlug` for branch names.
+	//
+	// Package rules are ordered by precedence. Later rules partially override earlier ones when the 'match' conditions are met.
 	"packageRules": [
 		{
 			"matchDepNames": ["*"],
@@ -127,9 +129,25 @@
 		},
 		{
 			// language=handlebars
+			"groupSlug": "aws-sdk-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "aws-sdk-{{newMajor}}.x",
+			"groupName": "the AWS SDK for JavaScript",
+			"commitMessageTopic": "the AWS SDK for JavaScript",
+			"matchDepNames": ["@aws-sdk/**"],
+			// The AWS SDK for JavaScript has a high release frequency. Upgrade only to every 20th release (corresponds to every 4th week) to reduce the number of pull requests opened by Renovate.
+			// Its versioning scheme is incremental on the minor version instead of SemVer (`3.<minor>.0`).
+			// language=jsregexp
+			"allowedVersions": "/\\d+\\.(0|\\d*[02468]0)\\.0/",
+			"rangeStrategy": "replace"
+		},
+		{
+			// language=handlebars
 			"branchTopic": "biome-{{newMajor}}.x",
 			"commitMessageTopic": "Biome",
 			"matchDepNames": ["@biomejs/biome"],
+			// The `customManagers:biomeVersions` preset does not support `minimumReleaseAge` when it upgrades the `$schema` field in `biome.jsonc`.
+			// Remove the `minimumReleaseAge` to make Renovate open a single pull request that covers both `biome.jsonc` and the `@biomejs/biome` npm package.
 			"minimumReleaseAge": "0"
 		},
 		{
@@ -141,6 +159,10 @@
 		{
 			"commitMessageTopic": "the Chromatic CLI",
 			"matchDepNames": ["chromatic"]
+		},
+		{
+			"commitMessageTopic": "Comet",
+			"matchDepNames": ["@rainstormy/comet"]
 		},
 		{
 			"commitMessageTopic": "ESLint",
@@ -276,6 +298,39 @@
 		},
 		{
 			// language=handlebars
+			"groupSlug": "sentry-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "sentry-{{newMajor}}.x",
+			"groupName": "Sentry",
+			"commitMessageTopic": "Sentry",
+			"matchDepNames": [
+				"@sentry/**",
+				"!@sentry/cli",
+				"!@sentry/cli-*",
+				"!@sentry/*-plugin",
+				"!@sentry/*-plugin-*"
+			]
+		},
+		{
+			// language=handlebars
+			"groupSlug": "sentry-cli-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "sentry-cli-{{newMajor}}.x",
+			"groupName": "the Sentry CLI",
+			"commitMessageTopic": "the Sentry CLI",
+			"matchDepNames": ["@sentry/cli", "@sentry/cli-*"]
+		},
+		{
+			// language=handlebars
+			"groupSlug": "sentry-plugins-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "sentry-plugins-{{newMajor}}.x",
+			"groupName": "Sentry plugins",
+			"commitMessageTopic": "Sentry plugins",
+			"matchDepNames": ["@sentry/*-plugin", "@sentry/*-plugin-*"]
+		},
+		{
+			// language=handlebars
 			"groupSlug": "snowplow-{{newMajor}}.x",
 			// language=handlebars
 			"branchTopic": "snowplow-{{newMajor}}.x",
@@ -328,6 +383,15 @@
 			]
 		},
 		{
+			// language=handlebars
+			"groupSlug": "terraform-{{newMajor}}.x",
+			// language=handlebars
+			"branchTopic": "terraform-{{newMajor}}.x",
+			"groupName": "Terraform",
+			"commitMessageTopic": "Terraform",
+			"matchDepNames": ["hashicorp/terraform", "terraform"]
+		},
+		{
 			"commitMessageTopic": "Testcontainers",
 			"matchDepNames": ["testcontainers"]
 		},
@@ -369,6 +433,14 @@
 			"matchDepNames": ["valibot"]
 		},
 		{
+			"commitMessageTopic": "Valkey",
+			"matchDepNames": ["valkey/valkey"]
+		},
+		{
+			"commitMessageTopic": "Valkey GLIDE",
+			"matchDepNames": ["@valkey/valkey-glide"]
+		},
+		{
 			"commitMessageTopic": "Vike",
 			"matchDepNames": ["vike"]
 		},
@@ -400,6 +472,10 @@
 		{
 			"commitMessageTopic": "the DOM Testing Library",
 			"matchDepNames": ["@testing-library/dom"]
+		},
+		{
+			"commitMessageTopic": "the Jest DOM Testing Library",
+			"matchDepNames": ["@testing-library/jest-dom"]
 		},
 		{
 			"commitMessageTopic": "the Preact Testing Library",

@@ -5,6 +5,21 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Support the [AWS SDK](https://aws.amazon.com/sdk-for-javascript) for
+  JavaScript in the `automerge-runtime-patch` configuration.
+- Support [Comet](https://github.com/rainstormy/comet) in the
+  `automerge-tooling-patch` configuration.
+- Support
+  the [Jest DOM Testing Library](https://testing-library.com/docs/ecosystem-jest-dom)
+  in the `automerge-tooling-patch` configuration.
+- Support [Sentry](https://sentry.io) in the `automerge-runtime-patch`
+  configuration.
+- Support [Terraform](https://terraform.io) in the `automerge-tooling-patch`
+  configuration.
+- Support [Valkey](https://valkey.io)
+  and [Valkey GLIDE](https://github.com/valkey-io/valkey-glide) in the
+  `automerge-runtime-patch` configuration.
 
 ## [1.7.0] - 2025-10-19
 ### Added
