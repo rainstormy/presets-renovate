@@ -161,6 +161,10 @@
 			"matchDepNames": ["chromatic"]
 		},
 		{
+			"commitMessageTopic": "Comet",
+			"matchDepNames": ["@rainstormy/comet"]
+		},
+		{
 			"commitMessageTopic": "ESLint",
 			"matchDepNames": ["eslint"]
 		},
