@@ -27,7 +27,6 @@
 				"@types/**",
 				"@typescript/native-preview",
 				"@vitest/**",
-				"actionlint",
 				"chromatic",
 				"eslint",
 				"jest",
@@ -40,7 +39,6 @@
 				"playwright-core",
 				"playwright-firefox",
 				"playwright-webkit",
-				"pnpm",
 				"prettier",
 				"storybook",
 				"testcontainers",
@@ -53,7 +51,9 @@
 		{
 			// Merge patch upgrades of other dependencies in the developer toolchain.
 			"matchDepNames": [
+				"actionlint",
 				"hashicorp/terraform",
+				"pnpm",
 				"rainstormy/presets-lefthook",
 				"terraform"
 			],
