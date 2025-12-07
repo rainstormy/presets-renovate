@@ -30,6 +30,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Require
   a [minimum release age](https://docs.renovatebot.com/key-concepts/minimum-release-age)
   of 7 days for all dependency upgrades.
+- Improve branch names.
 
 ## [1.7.0] - 2025-10-19
 ### Added

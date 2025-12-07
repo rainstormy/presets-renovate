@@ -107,18 +107,26 @@
 			"pinDigests": false
 		},
 		{
+			// language=handlebars
+			"branchTopic": "actionlint-{{newMajor}}.x",
 			"commitMessageTopic": "actionlint",
 			"matchDepNames": ["actionlint"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "ansis-{{newMajor}}.x",
 			"commitMessageTopic": "Ansis",
 			"matchDepNames": ["ansis"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "astro-{{newMajor}}.x",
 			"commitMessageTopic": "Astro",
 			"matchDepNames": ["astro"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "autoprefixer-{{newMajor}}.x",
 			"commitMessageTopic": "Autoprefixer",
 			"matchDepNames": ["autoprefixer"]
 		},
@@ -152,46 +160,68 @@
 			"matchDepNames": ["@rainstormy/presets-biome"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "chromatic-{{newMajor}}.x",
 			"commitMessageTopic": "the Chromatic CLI",
 			"matchDepNames": ["chromatic"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "comet-{{newMajor}}.x",
 			"commitMessageTopic": "Comet",
 			"matchDepNames": ["@rainstormy/comet"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "eslint-{{newMajor}}.x",
 			"commitMessageTopic": "ESLint",
 			"matchDepNames": ["eslint"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "headlessui-{{newMajor}}.x",
 			"commitMessageTopic": "Headless UI",
 			"matchDepNames": ["@headlessui/react"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "hls.js-{{newMajor}}.x",
 			"commitMessageTopic": "HLS.js",
 			"matchDepNames": ["hls.js"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "howler-{{newMajor}}.x",
 			"commitMessageTopic": "Howler",
 			"matchDepNames": ["howler"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "jest-{{newMajor}}.x",
 			"commitMessageTopic": "Jest",
 			"matchDepNames": ["jest"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "lefthook-{{newMajor}}.x",
 			"commitMessageTopic": "Lefthook",
 			"matchDepNames": ["lefthook"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "lefthook-presets-{{newMajor}}.x",
 			"commitMessageTopic": "the Lefthook presets",
 			"matchDepNames": ["rainstormy/presets-lefthook"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "mentoss-{{newMajor}}.x",
 			"commitMessageTopic": "Mentoss",
 			"matchDepNames": ["mentoss"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "mise-{{newMajor}}.x",
 			"commitMessageTopic": "mise-en-place",
 			"matchDepNames": ["jdx/mise"],
 			// mise-en-place has a high release frequency. Upgrade only to the first release of a month to reduce the number of pull requests opened by Renovate.
@@ -201,6 +231,8 @@
 			"rangeStrategy": "replace"
 		},
 		{
+			// language=handlebars
+			"branchTopic": "msw-{{newMajor}}.x",
 			"commitMessageTopic": "Mock Service Worker",
 			"matchDepNames": ["msw"]
 		},
@@ -240,18 +272,26 @@
 			]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "pnpm-{{newMajor}}.x",
 			"commitMessageTopic": "pnpm",
 			"matchDepNames": ["pnpm"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "postcss-{{newMajor}}.x",
 			"commitMessageTopic": "PostCSS",
 			"matchDepNames": ["postcss"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "preact-{{newMajor}}.x",
 			"commitMessageTopic": "Preact",
 			"matchDepNames": ["preact"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "prettier-{{newMajor}}.x",
 			"commitMessageTopic": "Prettier",
 			"matchDepNames": ["prettier"]
 		},
@@ -346,14 +386,20 @@
 			"matchDepNames": ["@snowplow/**"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "solid-{{newMajor}}.x",
 			"commitMessageTopic": "Solid",
 			"matchDepNames": ["solid-js"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "solid-router-{{newMajor}}.x",
 			"commitMessageTopic": "Solid Router",
 			"matchDepNames": ["@solidjs/router"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "solid-start-{{newMajor}}.x",
 			"commitMessageTopic": "SolidStart",
 			"matchDepNames": ["@solidjs/start"]
 		},
@@ -367,6 +413,8 @@
 			"matchDepNames": ["@storybook/**", "storybook"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "svgo-{{newMajor}}.x",
 			"commitMessageTopic": "SVGO",
 			"matchDepNames": ["svgo"]
 		},
@@ -399,6 +447,8 @@
 			"matchDepNames": ["hashicorp/terraform", "terraform"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "testcontainers-{{newMajor}}.x",
 			"commitMessageTopic": "Testcontainers",
 			"matchDepNames": ["testcontainers"]
 		},
@@ -412,10 +462,14 @@
 			"matchUpdateTypes": ["minor", "patch"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "typescript-{{newMajor}}.x",
 			"commitMessageTopic": "TypeScript",
 			"matchDepNames": ["typescript"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "tsgo-{{newMajor}}.x",
 			"commitMessageTopic": "tsgo",
 			"matchDepNames": ["@typescript/native-preview"],
 			// tsgo has a high release frequency. Upgrade only to the first release of a month to reduce the number of pull requests opened by Renovate.
@@ -424,38 +478,56 @@
 			"rangeStrategy": "replace"
 		},
 		{
+			// language=handlebars
+			"branchTopic": "typescript-presets-{{newMajor}}.x",
 			"commitMessageTopic": "the TypeScript presets",
 			"matchDepNames": ["@rainstormy/presets-typescript"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "undici-{{newMajor}}.x",
 			"commitMessageTopic": "Undici",
 			"matchDepNames": ["undici"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "updraft-{{newMajor}}.x",
 			"commitMessageTopic": "Updraft",
 			"matchDepNames": ["@rainstormy/updraft"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "valibot-{{newMajor}}.x",
 			"commitMessageTopic": "Valibot",
 			"matchDepNames": ["valibot"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "valkey-{{newMajor}}.x",
 			"commitMessageTopic": "Valkey",
 			"matchDepNames": ["valkey/valkey"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "valkey-glide-{{newMajor}}.x",
 			"commitMessageTopic": "Valkey GLIDE",
 			"matchDepNames": ["@valkey/valkey-glide"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "vike-{{newMajor}}.x",
 			"commitMessageTopic": "Vike",
 			"matchDepNames": ["vike"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "vinxi-{{newMajor}}.x",
 			"commitMessageTopic": "Vinxi",
 			"matchDepNames": ["vinxi"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "vite-{{newMajor}}.x",
 			"commitMessageTopic": "Vite",
 			"matchDepNames": ["vite"]
 		},
@@ -469,34 +541,50 @@
 			"matchDepNames": ["@vitest/**", "vitest"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "vue-{{newMajor}}.x",
 			"commitMessageTopic": "Vue",
 			"matchDepNames": ["vue"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "vue-router-{{newMajor}}.x",
 			"commitMessageTopic": "Vue Router",
 			"matchDepNames": ["vue-router"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "dom-testing-library-{{newMajor}}.x",
 			"commitMessageTopic": "the DOM Testing Library",
 			"matchDepNames": ["@testing-library/dom"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "jest-dom-testing-library-{{newMajor}}.x",
 			"commitMessageTopic": "the Jest DOM Testing Library",
 			"matchDepNames": ["@testing-library/jest-dom"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "preact-testing-library-{{newMajor}}.x",
 			"commitMessageTopic": "the Preact Testing Library",
 			"matchDepNames": ["@testing-library/preact"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "react-testing-library-{{newMajor}}.x",
 			"commitMessageTopic": "the React Testing Library",
 			"matchDepNames": ["@testing-library/react"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "vue-testing-library-{{newMajor}}.x",
 			"commitMessageTopic": "the Vue Testing Library",
 			"matchDepNames": ["@testing-library/vue"]
 		},
 		{
+			// language=handlebars
+			"branchTopic": "zod-{{newMajor}}.x",
 			"commitMessageTopic": "Zod",
 			"matchDepNames": ["zod"]
 		}
