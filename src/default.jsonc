@@ -16,6 +16,8 @@
 	"addLabels": ["dependencies"],
 	"stopUpdatingLabel": "suspended",
 	//
+	"minimumReleaseAge": "7 days",
+	//
 	// Make commit messages pretty and human-friendly.
 	// Discard the 'v' prefix from the version number.
 	// Use the verb 'upgrade' instead of 'update'. Unlike 'update', the verb 'upgrade' has a counterpart in 'downgrade'.
@@ -23,6 +25,8 @@
 	// npm and pnpm use both terms interchangeably.
 	// language=handlebars
 	"commitMessageAction": "Upgrade",
+	// language=handlebars
+	"commitMessageTopic": "`{{depName}}`",
 	// language=handlebars
 	"commitMessageExtra": "to {{{replace '^v' '' newVersion}}}",
 	// language=handlebars
@@ -85,11 +89,6 @@
 	// Package rules are ordered by precedence. Later rules partially override earlier ones when the 'match' conditions are met.
 	"packageRules": [
 		{
-			"matchDepNames": ["*"],
-			// language=handlebars
-			"commitMessageTopic": "`{{depName}}`"
-		},
-		{
 			"matchManagers": ["dockerfile", "docker-compose"],
 			// language=handlebars
 			"commitMessageTopic": "`{{depName}}` in Docker",
@@ -106,10 +105,6 @@
 			// language=handlebars
 			"commitMessageTopic": "`{{depName}}` in Terraform",
 			"pinDigests": false
-		},
-		{
-			"matchManagers": ["npm"],
-			"minimumReleaseAge": "3 days"
 		},
 		{
 			"commitMessageTopic": "actionlint",
