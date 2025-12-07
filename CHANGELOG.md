@@ -15,6 +15,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   in the `automerge-tooling-patch` configuration.
 - Support [Redis Insight](https://redis.io/insight) in the
   `automerge-tooling-patch` configuration.
+- Support
+  the [Renovate presets](https://github.com/rainstormy/presets-renovate) (this
+  repository) in the `automerge-tooling-patch` configuration.
 - Support [Sentry](https://sentry.io) in the `automerge-runtime-patch`
   configuration.
 - Support [Terraform](https://terraform.io) in the `automerge-tooling-patch`

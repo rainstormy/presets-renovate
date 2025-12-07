@@ -299,6 +299,12 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "renovate-presets-{{newMajor}}.x",
+			"commitMessageTopic": "the Renovate presets",
+			"matchDepNames": ["rainstormy/presets-renovate"]
+		},
+		{
+			// language=handlebars
 			"groupSlug": "sentry-{{newMajor}}.x",
 			// language=handlebars
 			"branchTopic": "sentry-{{newMajor}}.x",
