@@ -55,6 +55,7 @@
 				"hashicorp/terraform",
 				"pnpm",
 				"rainstormy/presets-lefthook",
+				"redis/redisinsight",
 				"terraform"
 			],
 			"matchUpdateTypes": ["patch"],

@@ -284,6 +284,12 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "redis-insight-{{newMajor}}.x",
+			"commitMessageTopic": "Redis Insight",
+			"matchDepNames": ["redis/redisinsight"]
+		},
+		{
+			// language=handlebars
 			"groupSlug": "remix-{{newMajor}}.x",
 			// language=handlebars
 			"branchTopic": "remix-{{newMajor}}.x",
