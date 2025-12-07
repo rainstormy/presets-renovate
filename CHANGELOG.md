@@ -13,6 +13,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Support
   the [Jest DOM Testing Library](https://testing-library.com/docs/ecosystem-jest-dom)
   in the `automerge-tooling-patch` configuration.
+- Support [Redis Insight](https://redis.io/insight) in the
+  `automerge-tooling-patch` configuration.
+- Support
+  the [Renovate presets](https://github.com/rainstormy/presets-renovate) (this
+  repository) in the `automerge-tooling-patch` configuration.
 - Support [Sentry](https://sentry.io) in the `automerge-runtime-patch`
   configuration.
 - Support [Terraform](https://terraform.io) in the `automerge-tooling-patch`
@@ -25,6 +30,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Require
   a [minimum release age](https://docs.renovatebot.com/key-concepts/minimum-release-age)
   of 7 days for all dependency upgrades.
+- Improve branch names.
 
 ## [1.7.0] - 2025-10-19
 ### Added
