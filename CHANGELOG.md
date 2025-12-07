@@ -21,6 +21,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   and [Valkey GLIDE](https://github.com/valkey-io/valkey-glide) in the
   `automerge-runtime-patch` configuration.
 
+### Changed
+- Require
+  a [minimum release age](https://docs.renovatebot.com/key-concepts/minimum-release-age)
+  of 3 days for all dependency upgrades.
+
 ## [1.7.0] - 2025-10-19
 ### Added
 - Support [actionlint](https://github.com/rhysd/actionlint) in the
