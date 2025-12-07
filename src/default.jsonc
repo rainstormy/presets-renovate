@@ -16,7 +16,7 @@
 	"addLabels": ["dependencies"],
 	"stopUpdatingLabel": "suspended",
 	//
-	"minimumReleaseAge": "3 days",
+	"minimumReleaseAge": "7 days",
 	//
 	// Make commit messages pretty and human-friendly.
 	// Discard the 'v' prefix from the version number.
