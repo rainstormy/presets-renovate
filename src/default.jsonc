@@ -252,6 +252,12 @@
 			"branchTopic": "node-{{newMajor}}.x",
 			"groupName": "Node.js",
 			"commitMessageTopic": "Node.js",
+			// Renovate may detect Node.js versions in multiple places, e.g. in a Dockerfile and in a `mise.toml` file.
+			// The Node.js version in the Dockerfile may also contain an image suffix like `-alpine`.
+			// This makes it differ from the purely SemVer-based Node.js version and causes Renovate to omit the version number from the commit message.
+			// In this case, we instruct Renovate to include the purely SemVer-based version in the commit message.
+			// language=handlebars
+			"commitMessageExtra": "to {{#if newMajor}}{{newMajor}}{{#if newMinor}}.{{newMinor}}{{#if newPatch}}.{{newPatch}}{{/if}}{{/if}}{{else}}{{{replace '^v' '' newVersion}}}{{/if}}",
 			"matchDepNames": ["node"]
 		},
 		{
