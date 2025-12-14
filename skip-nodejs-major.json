@@ -1,1 +1,1 @@
-{"$schema":"https://docs.renovatebot.com/renovate-schema.json","packageRules":[{"matchDepNames":["@types/node","node"],"matchUpdateTypes":["major"],"enabled":false}]}
+{"packageRules":[{"matchDepNames":["@types/node","node"],"matchUpdateTypes":["major"],"enabled":false}]}
