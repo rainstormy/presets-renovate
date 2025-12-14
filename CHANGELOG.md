@@ -5,6 +5,8 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.8.0] - 2025-12-14
 ### Added
 - Support the [AWS SDK](https://aws.amazon.com/sdk-for-javascript) for
   JavaScript in the `automerge-runtime-patch` configuration.
@@ -150,7 +152,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [MIT license](https://choosealicense.com/licenses/mit).
 - New configuration: `github>rainstormy/presets-renovate`.
 
-[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.7.0...HEAD
+[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.8.0...HEAD
+[1.8.0]: https://github.com/rainstormy/presets-renovate/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/rainstormy/presets-renovate/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/rainstormy/presets-renovate/compare/v1.5.1...v1.6.0
 [1.5.1]: https://github.com/rainstormy/presets-renovate/compare/v1.5.0...v1.5.1
