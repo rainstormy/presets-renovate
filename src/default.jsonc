@@ -146,12 +146,13 @@
 		},
 		{
 			// language=handlebars
+			"groupSlug": "biome-{{newMajor}}.x",
+			// language=handlebars
 			"branchTopic": "biome-{{newMajor}}.x",
+			"groupName": "Biome",
 			"commitMessageTopic": "Biome",
-			"matchDepNames": ["@biomejs/biome"],
-			// The `customManagers:biomeVersions` preset does not support `minimumReleaseAge` when it upgrades the `$schema` field in `biome.jsonc`.
-			// Remove the `minimumReleaseAge` to make Renovate open a single pull request that covers both `biome.jsonc` and the `@biomejs/biome` npm package.
-			"minimumReleaseAge": "0"
+			// The `customManagers:biomeVersions` preset also applies to `@biomejs/biome`.
+			"matchDepNames": ["@biomejs/biome"]
 		},
 		{
 			// language=handlebars
