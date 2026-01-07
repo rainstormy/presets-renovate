@@ -258,8 +258,16 @@
 			// This makes it differ from the purely SemVer-based Node.js version and causes Renovate to omit the version number from the commit message.
 			// In this case, we instruct Renovate to include the purely SemVer-based version in the commit message.
 			// language=handlebars
-			"commitMessageExtra": "to {{#if newMajor includeZero=true}}{{newMajor}}{{#if newMinor includeZero=true}}.{{newMinor}}{{#if newPatch includeZero=true}}.{{newPatch}}{{/if}}{{/if}}{{else}}{{{replace '^v' '' newVersion}}}{{/if}}",
+			"commitMessageExtra": "to {{#if newMajor includeZero=true}}{{newMajor}}{{#if newMinor includeZero=true}}.{{newMinor}}{{#if newPatch includeZero=true}}.{{newPatch}}{{/if}}{{/if}}{{else if newVersion}}{{{replace '^v' '' newVersion}}}{{else if newDigestShort}}{{newDigestShort}}{{else}}{{{replace '^v' '' newValue}}}{{/if}}",
 			"matchDepNames": ["node"]
+		},
+		{
+			// language=handlebars
+			"branchTopic": "node-{{newDigestShort}}",
+			"commitMessageTopic": "Node.js image digest",
+			"matchDepNames": ["node"],
+			"matchManagers": ["dockerfile", "docker-compose"],
+			"matchUpdateTypes": ["digest"]
 		},
 		{
 			// language=handlebars
@@ -334,6 +342,14 @@
 			"branchTopic": "redis-insight-{{newMajor}}.x",
 			"commitMessageTopic": "Redis Insight",
 			"matchDepNames": ["redis/redisinsight"]
+		},
+		{
+			// language=handlebars
+			"branchTopic": "redis-insight-{{newDigestShort}}",
+			"commitMessageTopic": "Redis Insight image digest",
+			"matchDepNames": ["redis/redisinsight"],
+			"matchManagers": ["dockerfile", "docker-compose"],
+			"matchUpdateTypes": ["digest"]
 		},
 		{
 			// language=handlebars
@@ -513,6 +529,14 @@
 			"branchTopic": "valkey-{{newMajor}}.x",
 			"commitMessageTopic": "Valkey",
 			"matchDepNames": ["valkey/valkey"]
+		},
+		{
+			// language=handlebars
+			"branchTopic": "valkey-{{newDigestShort}}",
+			"commitMessageTopic": "Valkey image digest",
+			"matchDepNames": ["valkey/valkey"],
+			"matchManagers": ["dockerfile", "docker-compose"],
+			"matchUpdateTypes": ["digest"]
 		},
 		{
 			// language=handlebars

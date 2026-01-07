@@ -9,6 +9,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Restore
   the [minimum release age](https://docs.renovatebot.com/key-concepts/minimum-release-age)
   for [Biome](https://biomejs.dev) to 7 days.
+- Improve commit messages and branch names for Docker image digest upgrades of
+  Node.js, [Redis Insight](https://redis.io/insight),
+  and [Valkey](https://valkey.io).
 
 ## [1.8.0] - 2025-12-14
 ### Added
