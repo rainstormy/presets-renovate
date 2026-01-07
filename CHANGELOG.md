@@ -5,6 +5,10 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Restore
+  the [minimum release age](https://docs.renovatebot.com/key-concepts/minimum-release-age)
+  for [Biome](https://biomejs.dev) to 7 days.
 
 ## [1.8.0] - 2025-12-14
 ### Added
@@ -141,8 +145,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `github>rainstormy/presets-renovate:automerge-tooling-patch`.
 
 ### Changed
-- Disable `minimumReleaseAge` for [Biome](https://biomejs.dev) to ensure that it
-  stays in sync with the `$schema` property in `biome.json`.
+- Disable
+  the [minimum release age](https://docs.renovatebot.com/key-concepts/minimum-release-age)
+  for [Biome](https://biomejs.dev) to ensure that it stays in sync with the
+  `$schema` property in `biome.json`.
 
 ### Fixed
 - Use glob patterns in `matchPackageNames` instead of `matchPackagePrefixes`.
