@@ -494,15 +494,6 @@
 			"matchDepNames": ["testcontainers"]
 		},
 		{
-			"groupSlug": "types",
-			"branchTopic": "types",
-			"groupName": "type definitions",
-			"commitMessageTopic": "type definitions",
-			"commitMessageExtra": "",
-			"matchDepNames": ["@types/**"],
-			"matchUpdateTypes": ["minor", "patch"]
-		},
-		{
 			// language=handlebars
 			"branchTopic": "typescript-{{newMajor}}.x",
 			"commitMessageTopic": "TypeScript",

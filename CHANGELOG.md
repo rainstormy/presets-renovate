@@ -13,6 +13,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Support [nginx](https://nginx.org/) in the `automerge-runtime-patch`
   configuration.
 
+### Changed
+- Separate type definition upgrades into multiple pull requests.
+
 ## [1.8.1] - 2026-01-07
 ### Fixed
 - Restore
