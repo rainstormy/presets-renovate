@@ -248,6 +248,12 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "nginx-{{newMajor}}.x",
+			"commitMessageTopic": "nginx",
+			"matchDepNames": ["nginx"]
+		},
+		{
+			// language=handlebars
 			"groupSlug": "node-{{newMajor}}.x",
 			// language=handlebars
 			"branchTopic": "node-{{newMajor}}.x",
