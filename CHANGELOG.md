@@ -8,6 +8,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - Support [Happy DOM](https://github.com/capricorn86/happy-dom) in the
   `automerge-tooling-patch` configuration.
+- Support [jsdom](https://github.com/jsdom/jsdom) in the
+  `automerge-tooling-patch` configuration.
 - Support [nginx](https://nginx.org/) in the `automerge-runtime-patch`
   configuration.
 
