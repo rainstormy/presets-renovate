@@ -5,6 +5,13 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Support [Happy DOM](https://github.com/capricorn86/happy-dom) in the
+  `automerge-tooling-patch` configuration.
+- Support [jsdom](https://github.com/jsdom/jsdom) in the
+  `automerge-tooling-patch` configuration.
+- Support [nginx](https://nginx.org/) in the `automerge-runtime-patch`
+  configuration.
 
 ## [1.8.1] - 2026-01-07
 ### Fixed

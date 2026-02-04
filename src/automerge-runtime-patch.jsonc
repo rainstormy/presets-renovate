@@ -40,7 +40,7 @@
 		},
 		{
 			// Merge patch upgrades of other runtime dependencies.
-			"matchDepNames": ["valkey/valkey"],
+			"matchDepNames": ["nginx", "valkey/valkey"],
 			"matchUpdateTypes": ["patch"],
 			"automerge": true
 		}

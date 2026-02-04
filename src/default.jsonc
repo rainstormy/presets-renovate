@@ -180,6 +180,12 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "happydom-{{newMajor}}.x",
+			"commitMessageTopic": "Happy DOM",
+			"matchDepNames": ["happy-dom"]
+		},
+		{
+			// language=handlebars
 			"branchTopic": "headlessui-{{newMajor}}.x",
 			"commitMessageTopic": "Headless UI",
 			"matchDepNames": ["@headlessui/react"]
@@ -201,6 +207,12 @@
 			"branchTopic": "jest-{{newMajor}}.x",
 			"commitMessageTopic": "Jest",
 			"matchDepNames": ["jest"]
+		},
+		{
+			// language=handlebars
+			"branchTopic": "jsdom-{{newMajor}}.x",
+			"commitMessageTopic": "jsdom",
+			"matchDepNames": ["jsdom"]
 		},
 		{
 			// language=handlebars
@@ -245,6 +257,12 @@
 			"groupName": "Next.js",
 			"commitMessageTopic": "Next.js",
 			"matchDepNames": ["@next/**", "next"]
+		},
+		{
+			// language=handlebars
+			"branchTopic": "nginx-{{newMajor}}.x",
+			"commitMessageTopic": "nginx",
+			"matchDepNames": ["nginx"]
 		},
 		{
 			// language=handlebars
