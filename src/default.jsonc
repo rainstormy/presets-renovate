@@ -180,6 +180,12 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "happydom-{{newMajor}}.x",
+			"commitMessageTopic": "Happy DOM",
+			"matchDepNames": ["happy-dom"]
+		},
+		{
+			// language=handlebars
 			"branchTopic": "headlessui-{{newMajor}}.x",
 			"commitMessageTopic": "Headless UI",
 			"matchDepNames": ["@headlessui/react"]

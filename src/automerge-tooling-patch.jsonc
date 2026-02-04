@@ -29,6 +29,7 @@
 				"@vitest/**",
 				"chromatic",
 				"eslint",
+				"happy-dom",
 				"jest",
 				"jest-environment-jsdom",
 				"lefthook",
