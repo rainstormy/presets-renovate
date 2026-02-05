@@ -5,6 +5,8 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.9.0] - 2026-02-05
 ### Added
 - Support [Happy DOM](https://github.com/capricorn86/happy-dom) in the
   `automerge-tooling-patch` configuration.
@@ -173,7 +175,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [MIT license](https://choosealicense.com/licenses/mit).
 - New configuration: `github>rainstormy/presets-renovate`.
 
-[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.8.1...HEAD
+[unreleased]: https://github.com/rainstormy/presets-renovate/compare/v1.9.0...HEAD
+[1.9.0]: https://github.com/rainstormy/presets-renovate/compare/v1.8.1...v1.9.0
 [1.8.1]: https://github.com/rainstormy/presets-renovate/compare/v1.8.0...v1.8.1
 [1.8.0]: https://github.com/rainstormy/presets-renovate/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/rainstormy/presets-renovate/compare/v1.6.0...v1.7.0
