@@ -16,6 +16,7 @@
 				"@playwright/**",
 				"@rainstormy/comet",
 				"@rainstormy/presets-biome",
+				"@rainstormy/presets-oxc",
 				"@rainstormy/presets-typescript",
 				"@rainstormy/updraft",
 				"@storybook/**",

@@ -289,6 +289,12 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "oxc-presets-{{newMajor}}.x",
+			"commitMessageTopic": "the Oxc presets",
+			"matchDepNames": ["@rainstormy/presets-oxc"]
+		},
+		{
+			// language=handlebars
 			"branchTopic": "oxfmt-{{newMajor}}.x",
 			"commitMessageTopic": "Oxfmt",
 			"matchDepNames": ["oxfmt"]
