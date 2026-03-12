@@ -289,6 +289,24 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "oxfmt-{{newMajor}}.x",
+			"commitMessageTopic": "Oxfmt",
+			"matchDepNames": ["oxfmt"]
+		},
+		{
+			// language=handlebars
+			"branchTopic": "oxlint-{{newMajor}}.x",
+			"commitMessageTopic": "Oxlint",
+			"matchDepNames": ["oxlint"]
+		},
+		{
+			// language=handlebars
+			"branchTopic": "oxlint-tsgolint-{{newMajor}}.x",
+			"commitMessageTopic": "tsgolint",
+			"matchDepNames": ["oxlint-tsgolint"]
+		},
+		{
+			// language=handlebars
 			"groupSlug": "playwright-{{newMajor}}.x",
 			// language=handlebars
 			"branchTopic": "playwright-{{newMajor}}.x",
