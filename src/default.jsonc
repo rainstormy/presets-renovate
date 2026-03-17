@@ -266,6 +266,14 @@
 		},
 		{
 			// language=handlebars
+			"branchTopic": "nginx-{{newDigestShort}}",
+			"commitMessageTopic": "nginx image digest",
+			"matchDepNames": ["nginx"],
+			"matchManagers": ["dockerfile", "docker-compose"],
+			"matchUpdateTypes": ["digest"]
+		},
+		{
+			// language=handlebars
 			"groupSlug": "node-{{newMajor}}.x",
 			// language=handlebars
 			"branchTopic": "node-{{newMajor}}.x",
