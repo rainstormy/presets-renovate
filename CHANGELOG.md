@@ -5,6 +5,9 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Improve commit messages and branch names for Docker image digest upgrades of
+  [nginx](https://nginx.org).
 
 ## [1.10.0] - 2026-03-15
 ### Added
@@ -22,7 +25,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `automerge-tooling-patch` configuration.
 - Support [jsdom](https://github.com/jsdom/jsdom) in the
   `automerge-tooling-patch` configuration.
-- Support [nginx](https://nginx.org/) in the `automerge-runtime-patch`
+- Support [nginx](https://nginx.org) in the `automerge-runtime-patch`
   configuration.
 
 ### Changed
@@ -100,7 +103,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.5.0] - 2025-09-02
 ### Added
-- Support the [Chromatic CLI](https://www.chromatic.com/docs/cli/) and
+- Support the [Chromatic CLI](https://www.chromatic.com/docs/cli) and
   `@chromatic-com/**` packages in the `automerge-tooling-patch` configuration.
 - Support [mise-en-place](https://mise.jdx.dev) in the `automerge-tooling-patch`
   configuration.
